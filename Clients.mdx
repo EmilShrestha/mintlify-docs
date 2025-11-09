@@ -1,0 +1,1695 @@
+---
+title: "Clients"
+description: "Clients are organizations that are managed under a Channel Partner in Launchpad. A client is the secure space where you add buildings, invite users, and control how those users sign in and what they can do. Use this page to understand how client workspaces are structured and to complete the first setup tasks. "
+---
+
+### **How Clients Fit in Launchpad**
+
+Each **Client** is a customer of the **Channel Partner**, an organisation or tenant with its own workspace.
+
+Inside each **Client**, you manage:
+
+- **Buildings**: Physical sites they monitor, like offices, campuses, and facilities.
+- **Users**: People who access those buildings.
+- **Roles and Permissions**: Define what each user is authorised to do.
+- **Authentication & Security (SSO)**: How users sign in securely.
+- **Trusted Organisations**: Share data or access with other clients.
+- **Service Accounts**: Automate integrations or API connections.
+
+<img
+  src="/ChatGPTImageNov7,2025,08_52_07PM.png"
+  alt="How Clientsfitin Launchpa"
+  title="How Clientsfitin Launchpa"
+  style={{ width:"62%" }}
+/>
+
+### **Create or open a client when:**
+
+- A Channel Partner is onboarding a new customer.
+- You need to group buildings and users for one customer.
+- You must apply different access or security settings for one organization.
+
+## **Add your first building in Launchpad**
+
+You need at least one building to begin using your client workspace. A building represents a physical facility that you monitor and control through KODE OS. Adding a building lets you link systems, invite users, and track data for that site. It’s the first step toward managing your portfolio.
+
+### Prerequisites
+
+Before adding a building, make sure you:
+
+- Have access to a **Client** under a **Channel Partner**.
+- Hold the **Admin** or **Manager** role for that client.
+- Know your building’s name and location.
+
+<Accordion title="Add a First Building">
+  1. In **Launchpad**, select **Buildings**. The **Buildings list** opens, showing all published and unpublished buildings with their address, time zone, and enabled products.
+  2. Click **\+ Add Building**.
+  3. In **General Information**, enter the required details for your new building. Fields marked with an asterisk (\*) are mandatory.
+
+       <Tooltip tip="">3.1. Enter the </Tooltip>**Name**<Tooltip tip="">of the building as you want it to appear in Launchpad.</Tooltip>
+
+       <Tooltip tip="">3.2. Enter the </Tooltip>**Year**<Tooltip tip="">the building was completed.</Tooltip>
+
+       <Tooltip tip="">3.3. Enter an </Tooltip>**Area**<Tooltip tip="">in </Tooltip> _ft²_<Tooltip tip="">. Total floor area of the building.</Tooltip>
+
+       <Tooltip tip="">3.4. Select the </Tooltip>\*\*Type \*\*<Tooltip tip="">from the dropdown. </Tooltip>
+
+       <Tooltip tip="">3.5. Enter the </Tooltip>\*\*# of Floors \*\*<Tooltip tip="">in the building.</Tooltip> 
+
+       3.6. Select the **Country Code** from the drop-down.
+
+       3.7. Enter the **Phone Number**. 
+
+       <Tooltip tip="">3.8. Enter a </Tooltip>**Base Temperature**<Tooltip tip="">. It is the reference temperature for energy calculations.</Tooltip>
+
+       <Tooltip tip="">3.9. Select the temperature</Tooltip> **Unit.**
+  4.  In **Address Information**, enter the complete address of the building. Ensure all fields are accurate, as these details affect location-based analytics.
+
+       4.1. Enter an **Address**. It must be the primary address line for the building.
+
+       4.2. Enter a **Street**. 
+
+       4.3. Enter a **City** where the building is located.
+
+       4.4. Enter a **State**.
+
+       4.5. Enter a **Zip** code.
+
+       4.6. Enter an optional **Address Line 2**.
+  5.  Click **Save**.
+
+     <img
+       src="/k1.png"
+       alt="Addingabuildingin Launchpa"
+       title="Addingabuildingin Launchpa"
+       style={{ width:"63%" }}
+     />
+
+     The new building is automatically set to _Unpublished_ status. By default, only **Super Admins** can view unpublished buildings.
+
+     You have successfully added a new building to your KODE OS portfolio. The building is now listed in Launchpad, ready for further configuration.
+</Accordion>
+
+## Manage Buildings
+
+Launchpad enables you to add, edit, publish, and manage all buildings in your KODE OS portfolio.\
+Each building represents a physical site or asset and serves as the foundation for user access, automation, and data management.
+
+<Accordion title="Add a New Building">
+  Add new buildings to your existing portfolio at any time. Each building you create becomes part of your organization’s managed sites in Launchpad, allowing you to configure details, assign users, and enable products as needed.
+
+  <Warning>
+    Newly created buildings are automatically set to **Unpublished**.\
+    Only users with **Super Admin** roles can view unpublished buildings.
+  </Warning>
+  1. In **Launchpad**, select **Buildings** from the sidebar.
+  2. Click **\+ Add Building**.
+  3. In **General Information**, enter the required details for your new building. Fields marked with an asterisk (\*) are mandatory.
+  4. Click **Save.**
+</Accordion>
+
+<Accordion title="Edit Building Details">
+  1. In the sidebar, click **Buildings**.
+  2. Select the building  to edit.
+  3. Click **Edit**.
+  4. Modify the required fields.
+  5. Click **Save**. 
+
+     The changes are applied instantly and reflected across KODE OS, myMSI, and Launchpad.
+</Accordion>
+
+<Accordion title="Publish a Building">
+  Publishing a building makes it visible and accessible to all authorized users within your organization.
+
+  1. In the sidebar, click **Buildings**.
+  2. Select an **Unpublished** building from the list.
+  3. Click **Publish**.\
+     A confirmation pop-up appears.
+  4. Click **Yes, Publish**.
+
+  The building’s status changes to **Published**, and its associated data becomes available across all KODE OS applications.
+</Accordion>
+
+<Accordion title="Search for Buildings">
+  Quickly locate any building in your portfolio using the search feature.
+
+  1. In **Launchpad**, click **Buildings**.
+  2. Search  a building  by entering the building name.
+  3. Click the building to open its details page.
+</Accordion>
+
+<Accordion title="Assign a Building to a User">
+  Assigning users to buildings defines who has access to specific sites within your organization.
+
+  1. In **Portfolio View**, select **Settings \>\> Buildings**.\
+     The buildings list appears.
+  2. Select a building to open its details page.
+  3. Click  **Users**  to view assigned users.
+  4. Click **\+ Assign Users**.
+  5. Select one or more users from the list.
+  6. Click **Save**.
+</Accordion>
+
+## **Assign a User to a building in Cloud BMS**
+
+Each user in KODE OS must be assigned to a building to access its dashboards, automation rules, and data. Assign users to specific buildings to control who can access building data and features in Cloud BMS.\
+This task is for administrators who manage access within KODE OS.
+
+<Info>
+  Without an assigned building, a user can sign in but won’t see any building-related data in Cloud BMS.
+</Info>
+
+### Prerequisites
+
+- You must have **Admin** permissions for the client.
+- The user must already exist in **Launchpad \>\> Users**.
+- At least one **building** must be created in your client workspace
+
+<Accordion title="Assign a user ">
+   1. In **Launchpad**, select **Users** from the sidebar.
+   2. Select a user  to assign to a building.
+   3. In  **Apps**, click \*\*Assign App \*\*of **KODE OS**.
+   4. From the **User Role** drop-down, select the appropriate role. For example, _Admin_, _Manager_, or _Viewer_.
+   5. Click **Assign**. The user is now assigned to KODE OS and receives an email notification.
+   6.  In **Cloud BMS**, go to **Portfolio \>\> Settings \>\> Users**.
+   7.  Select the same user to open their **User Details** page.
+   8. Click the **Buildings**. The list of assigned buildings appears.
+   9. Click **\+ Assign Buildings**.
+  10.  Select the building(s) to assign to the user.
+  11. Click **Save**.
+
+  <img
+    src="/k2.png"
+    alt="Selectause"
+    title="Selectause"
+    style={{ width:"82%" }}
+  />
+
+  The user now has access to the selected buildings in **Cloud BMS**, based on their assigned role in **KODE OS**.\
+  An email notification is automatically sent to confirm their new access.
+</Accordion>
+
+## Manage Users (Clients)
+
+Users display all existing accounts in your organization, including active, pending, and invited users.
+
+When adding or inviting users, assign an appropriate Launchpad role to define their access level.
+
+- **Admin Access** provides the highest level of control, allowing:
+
+  Launchpad Access:	Full access to all Launchpad features, allowing seamless navigation across modules.
+
+  Client Management: View and edit client details to maintain accurate, up-to-date information.
+
+  User Management: View, add, and modify user profiles within the organization.
+
+  SSO Configuration:	Access and configure Single Sign-On (SSO) settings for secure authentication.
+- **Restricted Access** provides no Launchpad access but allows channel partners to centrally add
+- and manage users without exposing the full interface.
+
+<AccordionGroup>
+  <Accordion title="Add or Invite a User">
+    Add new users to your organization or invite users from trusted external organizations.
+
+    <Warning>
+      You can only invite users who already have accounts under one of your **Trusted Organizations**.
+    </Warning>
+    1. In **Launchpad**, click **Users**.
+    2. Click **\+ New User**.
+    3. Choose one of the following:
+       - **Add User**: Create a new user within your organization (temporary or permanent).
+       - **Invite User**: Invite a user from a trusted organization to collaborate (temporary or permanent).
+  </Accordion>
+  <Accordion title="Add a User">
+    Adding a user  requires admin privileges in Launchpad.
+
+    3. In **General Information**, enter the required details of the user. Fields marked with an asterisk (\*) are mandatory.
+    2. In **Assign Apps**, select the app(s) to assign and their respective roles.\
+       For **KODE OS**, also assign the applicable **Sites**.
+    3. Click **Save User**.
+  </Accordion>
+  <Accordion title="Invite a user">
+    3. In **General Information**, enter the required details of the user. Fields marked with an asterisk (\*) are mandatory.
+    2. In **Assign Apps**, choose the app(s) and roles to assign.
+    3. Click **Invite User**.
+  </Accordion>
+</AccordionGroup>
+
+<Accordion title="Bulk Import Users">
+  Import multiple users at once using a `.xlsx` file. All listed users are automatically added to your organization.
+
+  1. In **Launchpad**, click **Users**.
+  2. Click the ( \*\*⋮ \*\*) icon on the **Users**.
+  3. Select **Bulk Import from .xlsx**.
+  4. Click **Download Template** to download the .xlst file.
+  5. Browse and open the template file.
+  6. In the file, fill out: First Name, Last Name, Email, Status, Position, Phone Number, Role, and Apps.
+  7. Save the file.
+  8. Attach or drag the file into **\+ Attach or Drag to Upload**.
+  9. Click **Import**.
+</Accordion>
+
+<Accordion title="Filter the Users List">
+  1. In **Launchpad**, click **Users**.
+  2. Click **Filters**.
+  3. Select filter criteria:
+     - Status (Active, Inactive, Pending, Locked)
+     - MFA Status (Active, Inactive)
+     - Account Type (Guest, Internal)
+     - Launchpad Role (Admin, Restricted Access)
+     - Sign-in Method
+  4. Click **Apply**. The list updates according to the selected filters.
+  5. 
+  6. 
+</Accordion>
+
+<Accordion title="Edit a User Account">
+   1. Click the user’s **Name**.
+   2. Click  **Edit.**
+   3. Update the necessary fields.
+   4. Click **Save**.
+   5. 
+   6. 
+   7. 
+   8. 
+   9. 
+  10. 
+  11. The information is updated instantly.
+</Accordion>
+
+<Accordion title="Delete or Deactivate a User Account">
+  1. Click the user’s **Name**.
+  2. Click the ( \*\*⋮ \*\*) icon.
+  3. Choose one of the following:
+     - **Delete**: permanently removes the user.
+     - **Deactivate**: disables the account but retains user data.
+</Accordion>
+
+<Accordion title="Assign a User to KODE OS">
+  Assign users to KODE OS during account creation or after they’ve been added to Launchpad to grant them access and define their role within the application.
+
+  1. In **Launchpad**, click **Users**.
+  2. Select the user to assign.
+  3. Next to **KODE OS**, click **Assign App**.
+  4. In the dialog, select the appropriate **User Role**.
+  5. Click **Assign**.
+
+  The user is assigned to **KODE OS** and receives a confirmation email.
+</Accordion>
+
+**myMSI User Roles**
+
+When assigning users to **myMSI**, select the appropriate role based on the user’s responsibilities and required access level.
+
+Available roles for Clients:
+
+- Client Admin: Can view and edit all project details across myMSI.
+- Site Manager: Can view and edit details under Projects, Sites, and Admin Panel only for the projects they are assigned to.
+- MSI Admin and MSI Project Manager: Can assign users to projects and manage project-level access.
+
+<Accordion title="Assign a User to myMSI">
+  Assign users to myMSI during account creation or after they’ve been added to Launchpad to grant them access and define their role within the application.
+
+  1. In **Launchpad**, click **Users**.
+  2. Select the user to assign.
+  3. Next to **myMSI**, click **Assign App**.
+  4. In the dialog, select the **User Role**.
+  5. Click **Assign**.
+
+  The user is assigned to **myMSI** and receives an email notification.
+</Accordion>
+
+## Control Access with Roles and Permissions
+
+Use roles and permissions in Launchpad to control who can access and manage KODE OS modules and data. Administrators can view existing roles, add new ones, and assign the right permissions for each user.
+
+### Why roles matter
+
+Roles keep the workspace secure and organized. They determine who can manage buildings, dashboards, or automations, and who can simply view them.\
+Launchpad uses **Role-Based Access Control (RBAC)** to manage user access.\
+Instead of assigning individual permissions to each user, permissions are grouped under _roles_, and users inherit access based on their assigned role.
+
+**Prerequisites**
+
+- You must have an **Admin** or **Super Admin** role.
+- At least one **user** and **building** must exist.
+- If your organization uses **SSO**, ensure IdP role attributes are configured.
+
+<Accordion title="View existing roles">
+  1. In **Launchpad**, click **Apps \>\> KODE OS**.
+  2. Select the **Roles**. The **Roles list** appears, showing each role, description, and permission count.
+  3. Click a role to view its details.
+</Accordion>
+
+<Accordion title="Add a new role">
+  1. In the **Roles list**, click **\+ Add Role**.
+  2. Enter a Role**Name**  and **Description**.
+  3. Under **Permissions**, select modules and submodules to include.
+  4. Choose **Read** or **Write** access for each.
+  5. Click **Save**.
+</Accordion>
+
+<Accordion title="Edit a role">
+  1. In the **Roles list**, select the role to modify.
+  2. Click **Edit**.
+  3. Update role details or adjust permission checkboxes.
+  4. Click **Save**.
+
+  <Info>
+    ⚠️ A warning icon may appear beside dependent modules; hover to view the relationships.
+  </Info>
+</Accordion>
+
+<Accordion title="Copy from an existing role">
+  1. In the **Roles list**, click **\+ Add Role**.
+     1. Click **Copy From Another Role**.
+     2. Choose a source role and click **Save**.
+     3. Edit any fields or permissions as needed.
+     4. Click **Save** again.
+</Accordion>
+
+<Accordion title="Delete a role " description="You cannot delete a role if users are still assigned to it.">
+  1. In the **Roles list**, select the role to remove.
+     1. Click **Delete**.
+     2. Click **Yes, Delete**.
+</Accordion>
+
+### Understanding role mapping (for SSO Integration)
+
+When **Single Sign-On (SSO)** is enabled, your organization’s **Identity Provider (IdP)** can directly map its internal roles to KODE OS roles.\
+That means:
+
+- Authentication happens in the IdP.
+- Role-based permissions automatically pass to KODE OS when a user logs in.
+
+This approach keeps access control consistent across systems and allows IT admins to manage roles from a single source.
+
+<Accordion title="Map user roles">
+  1. In **Launchpad**, click **Sign-in Methods**.
+  2. Select the authentication method to configure.
+  3. Open the **Role Mapping** tab.
+  4. Click **\+ Assign Role(s)**.
+  5. Enter the following details.
+
+        a. **Role Name / IdP Role Identifier**. The  name or UID of the IdP group.
+
+         b.**Launchpad Role**  (required)
+
+         c. **myMSI** and **KODE OS** roles (optional)
+  6. Click **Assign Role(s)**.
+</Accordion>
+
+### How permissions are structured
+
+**Permissions** define what a user can do within a module or submodule of KODE OS.\
+Each permission is tied to a role which grants users their effective access.
+
+**Types of permissions**
+
+- **Read Permissions**: Enables users to view information or access specific features within a module or submodule.
+- **Write Permissions**: Grants users the ability to modify, create, or delete data and configurations within a module or submodule.
+
+Permissions are grouped into **modules**, like Buildings, Maintenance, Users and **submodules**, like Users \> General.\
+This structure allows administrators to give granular, precise access.
+
+**Prerequisites**
+
+- Have **Admin** or **Super Admin** permissions in Launchpad.
+- Have already created a **role** in Launchpad.
+- Know what level of access that role should have for user management.
+
+<Accordion title="Assign permissions to a role">
+  1. In **Launchpad**, go to **Apps → KODE OS → Roles**.
+  2. Select the role to modify.
+  3. Click **Edit**.
+  4. In **Permissions**, expand a module (for example, _Maintenance_ or _Buildings_).
+  5. Select **Read** or **Write** checkboxes as needed.
+  6. Click **Save**.
+
+  <Note>
+    Assign only the minimum permissions needed to keep your access model secure and auditable.
+  </Note>
+</Accordion>
+
+<Accordion title="Fine-tune permissions with constraints" description="Once you’ve assigned base permissions, you can limit how those permissions behave for specific user roles.">
+  1. In the same **Permissions** section, scroll to **Users \>\> General**.
+  2. Next to **Get Users**, click **Constraints**.
+     - In the pop-up, select **Assigned in Same Building** to restrict access to buildings the user manages.
+  3. For **Create Users** and **Delete Users**, click **Manage Constraints**.
+     - Under **Choose Roles**, select which user types this role can create or delete.
+  4. Click **Confirm**, then **Save**.
+</Accordion>
+
+<Accordion title="Configure Permissions for Users in KODE OS">
+   1. In **Launchpad**, click **Apps**.
+   2. Click **KODE OS**.
+   3. Open the **Roles**.
+   4. Select the role  to modify, then click **Edit**.
+   5. In  **Permissions**, go to **Users \>\> General**.
+   6. Select  the read and write permissions you want to enable:
+      - **Get Users** — view existing users.
+      - **Create Users** — add new users.
+      - **Delete Users** — remove users from KODE OS.
+
+      After selecting the permissions, you can fine-tune them by applying constraints.
+   7. Next to **Get Users**, click **Constraints**. 
+   8.  Select **AssignedInSameBuilding**. This limits the role to managing users only within the buildings they’re assigned to.
+   9.  Click **Confirm**.
+  10. Next to **Create Users**, click **Manage Constraints**.
+  11. In the **AllowedRoles** dropdown, select which user types this role can add. For example, allow the User Admin role to add only Technicians or Managers.
+  12. Click **Confirm**.
+  13. Next to **Delete Users**, click **Manage Constraints**.
+  14. In the **AllowedRoles** dropdown, select which user types this role can delete.
+  15. Click **Confirm**.
+  16. Click **Save**. The changes to user management for the selected role are saved.
+</Accordion>
+
+### **Permissions**
+
+KODE OS permissions are organized by modules to help administrators configure user roles effectively.\
+The tables below list every permission available in KODE OS, along with what each allows a user to do.
+
+<Info>
+  - Site-level permissions only apply when a user is assigned to that building.
+  - Portfolio-level permissions apply globally.
+</Info>
+
+For each module, you’ll find a description of what the permission enables and whether it grants view-only or edit access.
+
+<Note>
+  We update permissions as new modules are added to KODE OS.
+</Note>
+
+Permissions are grouped by:
+
+- **Modules**: Functional areas such as BuildingBI or Launchpad.
+- **Submodules**: Specific components under each module, such as Dashboards or Datasources.
+- **Access Levels**: Define what actions can be performed within each submodule.
+
+**Permissions Reference Table**
+
+Below is the detailed permission structure grouped by module.\
+Each section lists its **submodules**, their **permissions**, **access levels**, and **descriptions**.
+
+**BuildingBI Module**
+
+It controls access to dashboards and data sources across buildings.
+
+<AccordionGroup>
+  <Accordion title="Dashboards">
+    | Permission Name        | Access Level | Description                                                                                                                                                                                                                                                                               |
+    | :--------------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **Manage Collections** | WRITE        | Manage dashboard collections within BuildingBI. Includes:  - Reorder all collections (regardless of access) - Create new collections - Edit existing collections - Delete collections - Publish collections - Manage viewers (adding/removing users with view-only access to collections) |
+    | **Get Dashboards**     | READ         | Retrieve and view all dashboards within the BuildingBI module. Visibility can be restricted via:  - Portfolio-level access control - Building-level access control                                                                                                                        |
+    | **Create Dashboards**  | WRITE        | Create new dashboards within the BuildingBI module.                                                                                                                                                                                                                                       |
+  </Accordion>
+  <Accordion title="Datasources">
+    | Permission                       | Access Level | Description                                                                     |
+    | :------------------------------- | :----------- | :------------------------------------------------------------------------------ |
+    | **Get Datasources**              | READ         | View all data sources (both physical and virtual) within the BuildingBI module. |
+    | **Create Physical Data Sources** | WRITE        | Add data sources.                                                               |
+    | **Create Virtual Data Sources**  | WRITE        | Create virtual data sources by writing queries on top of existing data sources. |
+    | **Delete Data Sources**          | WRITE        | Delete both physical and virtual data sources from the BuildingBI module.       |
+  </Accordion>
+  <Accordion title="Sharings">
+    | Permission               | Access Level | Description                                                                   |
+    | :----------------------- | :----------- | :---------------------------------------------------------------------------- |
+    | **Share Links**          | READ         | Generate public, shareable links to dashboards or widgets for external users. |
+    | **Delete Sharing Links** | WRITE        | Revoke or delete existing public sharing links.                               |
+  </Accordion>
+  <Accordion title="Templates">
+    | Permission           | Access Level | Description                                                               |
+    | :------------------- | :----------- | :------------------------------------------------------------------------ |
+    | **Get Templates**    | READ         | View and select from all available dashboard templates within BuildingBI. |
+    | **Create Templates** | WRITE        | Save dashboards or views as templates for reuse.                          |
+    | **Delete Templates** | WRITE        | Delete existing templates from the BuildingBI module.                     |
+  </Accordion>
+</AccordionGroup>
+
+**BuildingBI Module**
+
+It controls access to dashboards and data sources across buildings.
+
+**Dashboards**
+
+| Permission Name        | Access Level | Description                                                                                                                                                                                                                                                                               |
+| :--------------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manage Collections** | WRITE        | Manage dashboard collections within BuildingBI. Includes:  - Reorder all collections (regardless of access) - Create new collections - Edit existing collections - Delete collections - Publish collections - Manage viewers (adding/removing users with view-only access to collections) |
+| **Get Dashboards**     | READ         | Retrieve and view all dashboards within the BuildingBI module. Visibility can be restricted via:  - Portfolio-level access control - Building-level access control                                                                                                                        |
+| **Create Dashboards**  | WRITE        | Create new dashboards within the BuildingBI module.                                                                                                                                                                                                                                       |
+
+**Datasources**
+
+| Permission                       | Access Level | Description                                                                     |
+| :------------------------------- | :----------- | :------------------------------------------------------------------------------ |
+| **Get Datasources**              | READ         | View all data sources (both physical and virtual) within the BuildingBI module. |
+| **Create Physical Data Sources** | WRITE        | Add data sources.                                                               |
+| **Create Virtual Data Sources**  | WRITE        | Create virtual data sources by writing queries on top of existing data sources. |
+| **Delete Data Sources**          | WRITE        | Delete both physical and virtual data sources from the BuildingBI module.       |
+
+**Sharings**
+
+| Permission               | Access Level | Description                                                                   |
+| :----------------------- | :----------- | :---------------------------------------------------------------------------- |
+| **Share Links**          | READ         | Generate public, shareable links to dashboards or widgets for external users. |
+| **Delete Sharing Links** | WRITE        | Revoke or delete existing public sharing links.                               |
+
+**Templates**
+
+| Permission           | Access Level | Description                                                               |              |                                                                           |
+| :------------------- | :----------- | :------------------------------------------------------------------------ | ------------ | ------------------------------------------------------------------------- |
+| **Get Templates**    | READ         | View and select from all available dashboard templates within BuildingBI. |              |                                                                           |
+| **Create Templates** | WRITE        | Save dashboards or views as templates for reuse.                          |              |                                                                           |
+| **Delete Templates** | WRITE        | Permission                                                                | Access Level | Description                                                               |
+|                      |              | **Get Templates**                                                         | READ         | View and select from all available dashboard templates within BuildingBI. |
+|                      |              | **Create Templates**                                                      | WRITE        | Save dashboards or views as templates for reuse.                          |
+|                      |              | **Delete Templates**                                                      | WRITE        | Delete existing templates from the BuildingBI module.                     |
+
+**Buildings Module**
+
+<AccordionGroup>
+  <Accordion title="Areas">
+    | Permission                 | Access Level | Description                                                                    |
+    | :------------------------- | :----------- | :----------------------------------------------------------------------------- |
+    | **Get Areas**              | READ         | View the Areas module in the side panel and list areas within a building.      |
+    | **Create Areas**           | WRITE        | Define and create new areas (zones, rooms, floors) within a building.          |
+    | **Create Area Dashboards** | WRITE        | Create dashboards specific to an area, accessible within the area detail page. |
+    | **Delete Areas**           | WRITE        | Delete existing areas from the building layout.                                |
+    | **Delete Area Dashboards** | WRITE        | Delete dashboards created within the context of an area.                       |
+  </Accordion>
+  <Accordion title="Dashboards">
+    | Permission            | Access Level | Description                                                                                                     |
+    | :-------------------- | :----------- | :-------------------------------------------------------------------------------------------------------------- |
+    | **Get Dashboards**    | READ         | View dashboards tied to a building (Old Dashboards tool). Displays the Dashboards module at the building level. |
+    | **Create Dashboards** | WRITE        | Create building-level dashboards (Old Dashboards tool).                                                         |
+    | **Delete Dashboards** | WRITE        | Delete building-level dashboards (Old Dashboards tool).                                                         |
+  </Accordion>
+  <Accordion title="Datasources">
+    | Permission                       | Access Level | Description                                                                                                 |
+    | :------------------------------- | :----------- | :---------------------------------------------------------------------------------------------------------- |
+    | **Get Data Sources**             | READ         | View the Data Sources module and see all configured sources within a building.                              |
+    | **Create Data Sources**          | WRITE        | Create new data sources within the building context.                                                        |
+    | **Delete Data Sources**          | WRITE        | Delete existing data sources from a building.                                                               |
+    | **Clear Data Source Cache**      | WRITE        | Manually clear cached data of data sources. Useful for refreshing stale or outdated data.                   |
+    | **Discover Data Source Devices** | WRITE        | Run device discovery from a data source, and import discovered devices, points, and schedules into KODE OS. |
+  </Accordion>
+  <Accordion title="Devices">
+    | Permission                               | Access Level | Description                                                                                                                        |
+    | :--------------------------------------- | :----------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+    | **Manage Device Types**                  | WRITE        | Create, modify, or delete custom device types used across the platform. Accessed via the Admin module.                             |
+    | **Manage Device and System Attachments** | WRITE        | Attach or detach devices to systems or locations within a building. Enables relationships such as “device is part of HVAC system.” |
+    | **Get Device Graphic Templates**         | READ         | View available device graphic templates (Old Graphics tool) for visual representation of devices.                                  |
+    | **Create Device Graphic Templates**      | WRITE        | Create new graphic templates for devices using the legacy graphics tool.                                                           |
+    | **Delete Device Graphic Templates**      | WRITE        | Delete existing graphic templates used in the legacy system.                                                                       |
+    | **Get Devices**                          | READ         | View the Devices module for a building and access all devices and their associated points.                                         |
+    | **Get Device Types**                     | READ         | View all available device types, including system-defined and custom types.                                                        |
+    | **Get Linked Devices**                   | READ         | Retrieve lists of linked devices (device-to-device or device-to-system relationships).                                             |
+    | **Get Building Device Graphics**         | READ         | View graphical representations of devices from the device details page (Old Graphics tool).                                        |
+    | **Update Devices**                       | WRITE        | Modify device configurations, including metadata and mappings.                                                                     |
+    | **Delete Devices**                       | WRITE        | Permanently delete devices from the building.                                                                                      |
+    | **Delete Device Graphics**               | WRITE        | Delete individual graphics assigned to devices in the Old Graphics tool.                                                           |
+    | **Manage Linked Devices**                | WRITE        | Access and manage the Linked Devices module (used with myMSI integration) to create or remove device associations.                 |
+    | **Manage Virtual Devices**               | WRITE        | Access the Virtual Devices page and create, update, or delete virtual devices (logical devices built from multiple points).        |
+    | **Manage Device and Point Templating**   | WRITE        | Access the Point Templating module and configure device/point mappings to standardized ontology templates.                         |
+    | **Update Device Graphics**               | WRITE        | Modify the device’s graphic in the legacy graphics interface (Old Graphics tool).                                                  |
+  </Accordion>
+  <Accordion title="General">
+    | Permission                                  | Access Level | Description                                                                                                              |
+    | :------------------------------------------ | :----------- | :----------------------------------------------------------------------------------------------------------------------- |
+    | **Manage Attachments Related to Buildings** | WRITE        | View, upload, and delete documents or media files attached to buildings, systems, or devices in the Attachments section. |
+    | **Get Buildings**                           | READ         | View the list of buildings assigned to a user when logging into KODE OS.                                                 |
+    | **Assign Users to Buildings**               | WRITE        | Assign or revoke user access to specific buildings (typically managed by Admins or Portfolio Managers).                  |
+  </Accordion>
+  <Accordion title="Miscellaneous">
+    | Permission              | Access Level | Description                                                                                        |
+    | :---------------------- | :----------- | :------------------------------------------------------------------------------------------------- |
+    | **Get Notifications**   | READ         | Retrieve and view system-generated notifications (alerts, updates, warnings) related to buildings. |
+    | **Get Geocode Address** | READ         | Retrieve the geolocation and address of a building using reverse geocoding.                        |
+    | **Get Weather Data**    | READ         | Retrieve real-time weather data integrated with the building’s location.                           |
+  </Accordion>
+  <Accordion title="Points">
+    | Permission             | Access Level | Description                                                                                               |
+    | :--------------------- | :----------- | :-------------------------------------------------------------------------------------------------------- |
+    | **Get Points**         | READ         | Access the Points module and view all points (sensors, commands, statuses) associated with devices.       |
+    | **Get Point Units**    | READ         | View measurement units associated with points (visible in Admin settings).                                |
+    | **Update Points**      | WRITE        | Modify point configurations (rename, reconfigure units, or edit descriptions).                            |
+    | **Delete Points**      | WRITE        | Remove points from a device or system.                                                                    |
+    | **Write Points**       | WRITE        | Send commands or perform manual overrides on writable points (e.g., temperature setpoints, mode changes). |
+    | **Manage Point Units** | WRITE        | Create, edit, or delete custom point units used across devices.                                           |
+  </Accordion>
+  <Accordion title="Systems">
+    | Permission         | Access Level | Description                                                                                           |
+    | :----------------- | :----------- | :---------------------------------------------------------------------------------------------------- |
+    | **Get Systems**    | READ         | Access the Systems module and view lists of mechanical, electrical, or logical systems in a building. |
+    | **Create Systems** | WRITE        | Define and create new systems within a building.                                                      |
+    | **Delete Systems** | WRITE        | Remove systems and their relationships from a building.                                               |
+  </Accordion>
+  <Accordion title="Tags">
+    | Permission      | Access Level | Description                                                                                                      |
+    | :-------------- | :----------- | :--------------------------------------------------------------------------------------------------------------- |
+    | **Get Tags**    | READ         | View all existing tags in the Admin module.                                                                      |
+    | **Create Tags** | WRITE        | Create new tags within the Admin module for classifying assets, devices, and other elements.                     |
+    | **Delete Tags** | WRITE        | Delete tags from the Admin module. Tags help categorize and search for building elements like devices or points. |
+  </Accordion>
+</AccordionGroup>
+
+**Buildings Module**
+
+**Areas**
+
+| Permission                 | Access Level | Description                                                                    |
+| :------------------------- | :----------- | :----------------------------------------------------------------------------- |
+| **Get Areas**              | READ         | View the Areas module in the side panel and list areas within a building.      |
+| **Create Areas**           | WRITE        | Define and create new areas (zones, rooms, floors) within a building.          |
+| **Create Area Dashboards** | WRITE        | Create dashboards specific to an area, accessible within the area detail page. |
+| **Delete Areas**           | WRITE        | Delete existing areas from the building layout.                                |
+| **Delete Area Dashboards** | WRITE        | Delete dashboards created within the context of an area.                       |
+
+**Dashboards**
+
+| Permission            | Access Level | Description                                                                                                     |
+| :-------------------- | :----------- | :-------------------------------------------------------------------------------------------------------------- |
+| **Get Dashboards**    | READ         | View dashboards tied to a building (Old Dashboards tool). Displays the Dashboards module at the building level. |
+| **Create Dashboards** | WRITE        | Create building-level dashboards (Old Dashboards tool).                                                         |
+| **Delete Dashboards** | WRITE        | Delete building-level dashboards (Old Dashboards tool).                                                         |
+
+**Datasources**
+
+| Permission                       | Access Level | Description                                                                                                 |
+| :------------------------------- | :----------- | :---------------------------------------------------------------------------------------------------------- |
+| **Get Data Sources**             | READ         | View the Data Sources module and see all configured sources within a building.                              |
+| **Create Data Sources**          | WRITE        | Create new data sources within the building context.                                                        |
+| **Delete Data Sources**          | WRITE        | Delete existing data sources from a building.                                                               |
+| **Clear Data Source Cache**      | WRITE        | Manually clear cached data of data sources. Useful for refreshing stale or outdated data.                   |
+| **Discover Data Source Devices** | WRITE        | Run device discovery from a data source, and import discovered devices, points, and schedules into KODE OS. |
+
+**Devices**
+
+| Permission                               | Access Level | Description                                                                                                                        |
+| :--------------------------------------- | :----------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| **Manage Device Types**                  | WRITE        | Create, modify, or delete custom device types used across the platform. Accessed via the Admin module.                             |
+| **Manage Device and System Attachments** | WRITE        | Attach or detach devices to systems or locations within a building. Enables relationships such as “device is part of HVAC system.” |
+| **Get Device Graphic Templates**         | READ         | View available device graphic templates (Old Graphics tool) for visual representation of devices.                                  |
+| **Create Device Graphic Templates**      | WRITE        | Create new graphic templates for devices using the legacy graphics tool.                                                           |
+| **Delete Device Graphic Templates**      | WRITE        | Delete existing graphic templates used in the legacy system.                                                                       |
+| **Get Devices**                          | READ         | View the Devices module for a building and access all devices and their associated points.                                         |
+| **Get Device Types**                     | READ         | View all available device types, including system-defined and custom types.                                                        |
+| **Get Linked Devices**                   | READ         | Retrieve lists of linked devices (device-to-device or device-to-system relationships).                                             |
+| **Get Building Device Graphics**         | READ         | View graphical representations of devices from the device details page (Old Graphics tool).                                        |
+| **Update Devices**                       | WRITE        | Modify device configurations, including metadata and mappings.                                                                     |
+| **Delete Devices**                       | WRITE        | Permanently delete devices from the building.                                                                                      |
+| **Delete Device Graphics**               | WRITE        | Delete individual graphics assigned to devices in the Old Graphics tool.                                                           |
+| **Manage Linked Devices**                | WRITE        | Access and manage the Linked Devices module (used with myMSI integration) to create or remove device associations.                 |
+| **Manage Virtual Devices**               | WRITE        | Access the Virtual Devices page and create, update, or delete virtual devices (logical devices built from multiple points).        |
+| **Manage Device and Point Templating**   | WRITE        | Access the Point Templating module and configure device/point mappings to standardized ontology templates.                         |
+| **Update Device Graphics**               | WRITE        | Modify the device’s graphic in the legacy graphics interface (Old Graphics tool).                                                  |
+
+**General**
+
+| Permission                                  | Access Level | Description                                                                                                              |
+| :------------------------------------------ | :----------- | :----------------------------------------------------------------------------------------------------------------------- |
+| **Manage Attachments Related to Buildings** | WRITE        | View, upload, and delete documents or media files attached to buildings, systems, or devices in the Attachments section. |
+| **Get Buildings**                           | READ         | View the list of buildings assigned to a user when logging into KODE OS.                                                 |
+| **Assign Users to Buildings**               | WRITE        | Assign or revoke user access to specific buildings (typically managed by Admins or Portfolio Managers).                  |
+
+**Miscellaneous**
+
+| Permission              | Access Level | Description                                                                                        |
+| :---------------------- | :----------- | :------------------------------------------------------------------------------------------------- |
+| **Get Notifications**   | READ         | Retrieve and view system-generated notifications (alerts, updates, warnings) related to buildings. |
+| **Get Geocode Address** | READ         | Retrieve the geolocation and address of a building using reverse geocoding.                        |
+| **Get Weather Data**    | READ         | Retrieve real-time weather data integrated with the building’s location.                           |
+
+**Points**
+
+| Permission             | Access Level | Description                                                                                               |
+| :--------------------- | :----------- | :-------------------------------------------------------------------------------------------------------- |
+| **Get Points**         | READ         | Access the Points module and view all points (sensors, commands, statuses) associated with devices.       |
+| **Get Point Units**    | READ         | View measurement units associated with points (visible in Admin settings).                                |
+| **Update Points**      | WRITE        | Modify point configurations (rename, reconfigure units, or edit descriptions).                            |
+| **Delete Points**      | WRITE        | Remove points from a device or system.                                                                    |
+| **Write Points**       | WRITE        | Send commands or perform manual overrides on writable points (e.g., temperature setpoints, mode changes). |
+| **Manage Point Units** | WRITE        | Create, edit, or delete custom point units used across devices.                                           |
+
+**Systems**
+
+| Permission         | Access Level | Description                                                                                           |
+| :----------------- | :----------- | :---------------------------------------------------------------------------------------------------- |
+| **Get Systems**    | READ         | Access the Systems module and view lists of mechanical, electrical, or logical systems in a building. |
+| **Create Systems** | WRITE        | Define and create new systems within a building.                                                      |
+| **Delete Systems** | WRITE        | Remove systems and their relationships from a building.                                               |
+
+**Tags**
+
+| Permission      | Access Level | Description                                                                                                      |
+| :-------------- | :----------- | :--------------------------------------------------------------------------------------------------------------- |
+| **Get Tags**    | READ         | View all existing tags in the Admin module.                                                                      |
+| **Create Tags** | WRITE        | Create new tags within the Admin module for classifying assets, devices, and other elements.                     |
+| **Delete Tags** | WRITE        | Delete tags from the Admin module. Tags help categorize and search for building elements like devices or points. |
+
+**EnerG Module**
+
+<AccordionGroup>
+  <Accordion title="Building Dashboards">
+    | Permission                           | Access Level | Description                                                                                                                |
+    | :----------------------------------- | :----------- | :------------------------------------------------------------------------------------------------------------------------- |
+    | **View Building Performance Tab**    | READ         | Access and view energy performance metrics for a specific building, including consumption, efficiency, and trend analysis. |
+    | **View Building Cost & Billing Tab** | READ         | View detailed energy cost breakdowns and billing-related metrics for an individual building.                               |
+    | **View Building Demand & Load Tab**  | READ         | Access demand response metrics, peak load data, and load profiles at the building level.                                   |
+    | **View Building Data Quality Tab**   | READ         | View data completeness and accuracy insights for meters and devices associated with the building.                          |
+    | **View Building Carbon Metrics Tab** | READ         | View carbon emissions and environmental impact metrics derived from energy usage.                                          |
+    | **View Building Interval Data Tab**  | READ         | Access interval data, such as 15-minute, hourly, for energy readings per building.                                         |
+    | **View Building Data Table Tab**     | READ         | View raw or summarized energy data in tabular format at the building level.                                                |
+  </Accordion>
+  <Accordion title="General">
+    | Permission          | Access Level | Description                                                                                   |
+    | :------------------ | :----------- | :-------------------------------------------------------------------------------------------- |
+    | **View Energy Hub** | READ         | Access the **Energy Hub** module that centralizes energy analytics across multiple buildings. |
+    | **Edit Energy Hub** | WRITE        | Configure, customize, or update data sources, settings, and KPIs within the Energy Hub.       |
+  </Accordion>
+  <Accordion title="Portfolio Dashboards">
+    | Permission                            | Access Level | Description                                                                                   |
+    | :------------------------------------ | :----------- | :-------------------------------------------------------------------------------------------- |
+    | **View Portfolio Performance Tab**    | READ         | View aggregated energy performance metrics across all buildings in a portfolio.               |
+    | **View Portfolio Cost & Billing Tab** | READ         | View total and comparative energy costs and billing summaries across the portfolio.           |
+    | **View Portfolio Data Table Tab**     | READ         | Access a tabular view of aggregated energy data across the portfolio for analysis and export. |
+  </Accordion>
+</AccordionGroup>
+
+**EnerG Module**
+
+**Building Dashboards**
+
+| Permission                           | Access Level | Description                                                                                                                |
+| :----------------------------------- | :----------- | :------------------------------------------------------------------------------------------------------------------------- |
+| **View Building Performance Tab**    | READ         | Access and view energy performance metrics for a specific building, including consumption, efficiency, and trend analysis. |
+| **View Building Cost & Billing Tab** | READ         | View detailed energy cost breakdowns and billing-related metrics for an individual building.                               |
+| **View Building Demand & Load Tab**  | READ         | Access demand response metrics, peak load data, and load profiles at the building level.                                   |
+| **View Building Data Quality Tab**   | READ         | View data completeness and accuracy insights for meters and devices associated with the building.                          |
+| **View Building Carbon Metrics Tab** | READ         | View carbon emissions and environmental impact metrics derived from energy usage.                                          |
+| **View Building Interval Data Tab**  | READ         | Access interval data, such as 15-minute, hourly, for energy readings per building.                                         |
+| **View Building Data Table Tab**     | READ         | View raw or summarized energy data in tabular format at the building level.                                                |
+
+**General**
+
+| Permission          | Access Level | Description                                                                                   |
+| :------------------ | :----------- | :-------------------------------------------------------------------------------------------- |
+| **View Energy Hub** | READ         | Access the **Energy Hub** module that centralizes energy analytics across multiple buildings. |
+| **Edit Energy Hub** | WRITE        | Configure, customize, or update data sources, settings, and KPIs within the Energy Hub.       |
+
+**Portfolio Dashboards**
+
+| Permission                            | Access Level | Description                                                                                   |
+| :------------------------------------ | :----------- | :-------------------------------------------------------------------------------------------- |
+| **View Portfolio Performance Tab**    | READ         | View aggregated energy performance metrics across all buildings in a portfolio.               |
+| **View Portfolio Cost & Billing Tab** | READ         | View total and comparative energy costs and billing summaries across the portfolio.           |
+| **View Portfolio Data Table Tab**     | READ         | Access a tabular view of aggregated energy data across the portfolio for analysis and export. |
+
+**Maintenance Module**
+
+<AccordionGroup>
+  <Accordion title="Dashboard">
+    | Permission        | Access Level | Description                                                                                                       |
+    | :---------------- | :----------- | :---------------------------------------------------------------------------------------------------------------- |
+    | **Get Dashboard** | READ         | Access and view the Maintenance Dashboard, including KPIs and overview metrics related to maintenance activities. |
+  </Accordion>
+  <Accordion title="General">
+    | Permission          | Access Level | Description                                                                                     |
+    | :------------------ | :----------- | :---------------------------------------------------------------------------------------------- |
+    | **Get Maintenance** | READ         | Access the Maintenance module to view and track maintenance-related records and configurations. |
+  </Accordion>
+  <Accordion title="Notification Policies">
+    | Permission                     | Access Level | Description                                                                     |
+    | :----------------------------- | :----------- | :------------------------------------------------------------------------------ |
+    | **Get Notification Policies**  | READ         | View existing rules and configurations for automated maintenance notifications. |
+    | **Update Notification Policy** | WRITE        | Create, modify, or deactivate maintenance notification policies and rules.      |
+  </Accordion>
+  <Accordion title="Schedule Logs">
+    | Permission            | Access Level | Description                                                              |
+    | :-------------------- | :----------- | :----------------------------------------------------------------------- |
+    | **Get Schedule Logs** | READ         | View the execution history and logs of preventive maintenance schedules. |
+  </Accordion>
+  <Accordion title="Schedules">
+    | Permission          | Access Level | Description                                                                          |
+    | :------------------ | :----------- | :----------------------------------------------------------------------------------- |
+    | **Get Schedules**   | READ         | View the list of preventive maintenance schedules configured for devices or systems. |
+    | **Create Schedule** | WRITE        | Define and create new recurring or one-time maintenance schedules.                   |
+    | **Run Schedule**    | WRITE        | Manually trigger or execute an existing maintenance schedule.                        |
+    | **Delete Schedule** | WRITE        | Delete a maintenance schedule from the system.                                       |
+  </Accordion>
+  <Accordion title="Task Templates">
+    | Permission               | Access Level | Description                                                                              |
+    | :----------------------- | :----------- | :--------------------------------------------------------------------------------------- |
+    | **Get Task Templates**   | READ         | View predefined maintenance task templates that standardize recurring maintenance tasks. |
+    | **Create Task Template** | WRITE        | Create new templates for reusable maintenance tasks.                                     |
+    | **Delete Task Template** | WRITE        | Delete existing maintenance task templates.                                              |
+  </Accordion>
+  <Accordion title="Tasks">
+    | Permission               | Access Level | Description                                                                     |
+    | :----------------------- | :----------- | :------------------------------------------------------------------------------ |
+    | **Get Tasks**            | READ         | View all maintenance tasks, including status, assignee, and priority.           |
+    | **Create Task**          | WRITE        | Manually create a new maintenance task (ad-hoc or trigger-based).               |
+    | **Update Task Status**   | WRITE        | Change the status of a task (e.g., _Open_, _In Progress_, _Completed_).         |
+    | **Update Task Assignee** | WRITE        | Reassign tasks to other users or teams.                                         |
+    | **Delete Task**          | WRITE        | Delete an existing maintenance task.                                            |
+    | **Create Work Order**    | WRITE        | Create a work order linked to a task for external vendor or internal execution. |
+  </Accordion>
+</AccordionGroup>
+
+**Maintenance Module**
+
+**Dashboard**
+
+| Permission        | Access Level | Description                                                                                                       |
+| :---------------- | :----------- | :---------------------------------------------------------------------------------------------------------------- |
+| **Get Dashboard** | READ         | Access and view the Maintenance Dashboard, including KPIs and overview metrics related to maintenance activities. |
+
+**General**
+
+| Permission          | Access Level | Description         |              |                                                                                                 |
+| :------------------ | :----------- | :------------------ | ------------ | ----------------------------------------------------------------------------------------------- |
+| **Get Maintenance** | READ         | Permission          | Access Level | Description                                                                                     |
+|                     |              | **Get Maintenance** | READ         | Access the Maintenance module to view and track maintenance-related records and configurations. |
+
+**Notification Policies**
+
+| Permission                     | Access Level | Description                                                                     |
+| :----------------------------- | :----------- | :------------------------------------------------------------------------------ |
+| **Get Notification Policies**  | READ         | View existing rules and configurations for automated maintenance notifications. |
+| **Update Notification Policy** | WRITE        | Create, modify, or deactivate maintenance notification policies and rules.      |
+
+**Schedule Logs**
+
+| Permission            | Access Level | Description                                                              |
+| :-------------------- | :----------- | :----------------------------------------------------------------------- |
+| **Get Schedule Logs** | READ         | View the execution history and logs of preventive maintenance schedules. |
+
+**Schedules**
+
+| Permission          | Access Level | Description                                                                          |
+| :------------------ | :----------- | :----------------------------------------------------------------------------------- |
+| **Get Schedules**   | READ         | View the list of preventive maintenance schedules configured for devices or systems. |
+| **Create Schedule** | WRITE        | Define and create new recurring or one-time maintenance schedules.                   |
+| **Run Schedule**    | WRITE        | Manually trigger or execute an existing maintenance schedule.                        |
+| **Delete Schedule** | WRITE        | Delete a maintenance schedule from the system.                                       |
+
+**Task Templates**
+
+| Permission               | Access Level | Description                                                                              |
+| :----------------------- | :----------- | :--------------------------------------------------------------------------------------- |
+| **Get Task Templates**   | READ         | View predefined maintenance task templates that standardize recurring maintenance tasks. |
+| **Create Task Template** | WRITE        | Create new templates for reusable maintenance tasks.                                     |
+| **Delete Task Template** | WRITE        | Delete existing maintenance task templates.                                              |
+
+**Tasks**
+
+| Permission               | Access Level | Description                                                                        |
+| :----------------------- | :----------- | :--------------------------------------------------------------------------------- |
+| **Get Tasks**            | READ         | View all maintenance tasks, including status, assignee, and priority.              |
+| **Create Task**          | WRITE        | Manually create a new maintenance task (ad-hoc or trigger-based).                  |
+| **Update Task Status**   | WRITE        | Change the status of a task (e.g., _Open_, _In Progress_, _Completed_).            |
+| **Update Task Assignee** | WRITE        | Reassign tasks to other users or teams.                                            |
+| **Delete Task**          | WRITE        | Delete an existing maintenance task.                                               |
+| **Create Work Order**    | WRITE        | Create a work order linked to a task for an external vendor or internal execution. |
+
+**Modules**
+
+Each Submodule lists its available permissions, access level, and description.
+
+<AccordionGroup>
+  <Accordion title="Admin">
+    | Permission             | Access Level | Description                                     |
+    | :--------------------- | :----------- | :---------------------------------------------- |
+    | **Access Admin Panel** | READ         | Access the Admin panel from the portfolio view. |
+  </Accordion>
+  <Accordion title="Audit">
+    | Permission                 | Access Level | Description                                                |
+    | :------------------------- | :----------- | :--------------------------------------------------------- |
+    | **Create Audit Templates** | WRITE        | Create new Audit tables in the Admin module of a building. |
+    | **Get Audit Templates**    | READ         | Access the Audit module and view created tables.           |
+    | **Delete Audit Templates** | WRITE        | Delete Audit tables in the Admin module of a building.     |
+  </Accordion>
+  <Accordion title="Connectivity">
+    | Permission        | Access Level | Description                                                  |
+    | :---------------- | :----------- | :----------------------------------------------------------- |
+    | **Create Tunnel** | WRITE        | Create a tunnel in the Connectivity module.                  |
+    | **Delete Tunnel** | WRITE        | Delete an existing tunnel in the Connectivity module.        |
+    | **Get Tunnels**   | READ         | View the list of created tunnels in the Connectivity module. |
+  </Accordion>
+  <Accordion title="Dashboards">
+    | Permission            | Access Level | Description                                                         |
+    | :-------------------- | :----------- | :------------------------------------------------------------------ |
+    | **Get Dashboards**    | READ         | View the Dashboards module at building level (Old Dashboards tool). |
+    | **Create Dashboards** | WRITE        | Create dashboards within a building (Old Dashboards tool).          |
+    | **Delete Dashboards** | WRITE        | Delete dashboards within a building.                                |
+    | **Share Widgets**     | WRITE        | Create a shareable link for a widget in a dashboard.                |
+  </Accordion>
+  <Accordion title="Deployment_Audit">
+    | Permission                              | Access Level | Description                                              |
+    | :-------------------------------------- | :----------- | :------------------------------------------------------- |
+    | **Get Deployment Audit Reports**        | READ         | Access the Deployment Audit module.                      |
+    | **Get Deployment Audit Report Details** | READ         | View Deployment Audit reports for a specific building.   |
+    | **Create Deployment Audit Report**      | WRITE        | Create Deployment Audit reports for a specific building. |
+  </Accordion>
+  <Accordion title="Energy_Dashboard">
+    | Permission               | Access Level | Description                                        |
+    | :----------------------- | :----------- | :------------------------------------------------- |
+    | **Get Energy Dashboard** | READ         | Access the old Energy Dashboard from the main bar. |
+  </Accordion>
+  <Accordion title="FDDV2">
+    | Permission                                            | Access Level | Description                                                                             |
+    | :---------------------------------------------------- | :----------- | :-------------------------------------------------------------------------------------- |
+    | **Notify Users Through Phone Call**                   | READ         | Initiate phone calls to notify users about important events requiring immediate action. |
+    | **Notify Users Through Text Message**                 | READ         | Send SMS alerts for real-time event notifications.                                      |
+    | **Get FDD Events**                                    | READ         | Track events and receive associated notifications.                                      |
+    | **Get FDD Routines**                                  | READ         | View custom routines used for equipment monitoring.                                     |
+    | **Get FDD Configs**                                   | READ         | View Fault Detection and Diagnostics (FDD) configurations.                              |
+    | **Get FDD Notification Policy**                       | READ         | View notification policies defining recipients and delivery methods.                    |
+    | **Acknowledge FDD Events**                            | WRITE        | Mark events as acknowledged to signal that the issue is being handled.                  |
+    | **Create FDD Notification Policy**                    | WRITE        | Create building-level notification policies.                                            |
+    | **Delete FDD Notification Policy**                    | WRITE        | Delete building-level notification policies.                                            |
+    | **Create FDD Portfolio Notification Policy**          | WRITE        | Create portfolio-level notification policies for reuse across buildings.                |
+    | **Delete FDD Portfolio Notification Policy**          | WRITE        | Delete portfolio-level notification policies.                                           |
+    | **Create FDD Routines**                               | WRITE        | Create custom routines with logic-block programming for automating operations.          |
+    | **Create FDD Configs**                                | WRITE        | Configure equipment monitoring and alert thresholds.                                    |
+    | **Delete FDD Routines**                               | WRITE        | Delete custom-created routines (from user library only).                                |
+    | **Import / Export FDD Routines**                      | WRITE        | Import and export routines between portfolios.                                          |
+    | **Update FDD Portfolio Dashboard Filter Preferences** | WRITE        | Set default filters on portfolio dashboards for all users.                              |
+    | **Update FDD Building Dashboard Filter Preferences**  | WRITE        | Set default filters for building dashboards.                                            |
+    | **Update FDD Ack Event Preferences**                  | WRITE        | Define portfolio SLA response times and comment requirements.                           |
+    | **Send External-Push**                                | WRITE        | Send manual push notifications to third-party systems.                                  |
+    | **Update / Hide Priorities**                          | WRITE        | Customize priority names and colors at portfolio level.                                 |
+  </Accordion>
+  <Accordion title="FTT">
+    | Permission                                            | Access Level | Description                                                          |
+    | :---------------------------------------------------- | :----------- | :------------------------------------------------------------------- |
+    | **Get FTT Workflows**                                 | READ         | View custom workflows for functional testing.                        |
+    | **Create FTT Workflows**                              | WRITE        | Create custom testing workflows using logic-block tools.             |
+    | **Delete FTT Workflow**                               | WRITE        | Delete user-created workflows (does not affect shared library).      |
+    | **Archive FTT Tests**                                 | WRITE        | Archive test results for organization.                               |
+    | **Run Manual Test**                                   | WRITE        | Perform manual device-level tests.                                   |
+    | **Import / Export FTT Workflows**                     | WRITE        | Manage workflow libraries across portfolios.                         |
+    | **Update FTT Concurrently Running Test Limit**        | READ         | Set the maximum number of devices tested simultaneously (1–5).       |
+    | **Get FTT Projects**                                  | READ         | View all FTT projects linked to a building or portfolio.             |
+    | **Run / Stop Tasks Manually**                         | WRITE        | Manually start or stop testing tasks after a schedule starts.        |
+    | **Create FTT Projects**                               | WRITE        | Schedule tests across devices and floors for comprehensive coverage. |
+    | **Update FTT Portfolio Dashboard Filter Preferences** | WRITE        | Set default portfolio-level filters on dashboards.                   |
+    | **Update FTT Building Dashboard Filter Preferences**  | WRITE        | Set default building-level filters on dashboards.                    |
+    | **Get FTT History**                                   | READ         | View test results for monitoring and analysis.                       |
+  </Accordion>
+  <Accordion title="GraphicsV1">
+    | Permission                | Access Level | Description                                                   |
+    | :------------------------ | :----------- | :------------------------------------------------------------ |
+    | **Get Old Graphics (V1)** | READ         | View old graphics in system and device details (legacy tool). |
+  </Accordion>
+  <Accordion title="GraphicsV2">
+    | Permission        | Access Level | Description                                                                           |
+    | :---------------- | :----------- | :------------------------------------------------------------------------------------ |
+    | **Get Graphics**  | READ         | View new graphics in system and device details.                                       |
+    | **Edit Graphics** | WRITE        | Access and edit floorplans, systems, and device graphics using the new Graphics tool. |
+  </Accordion>
+  <Accordion title="Marker_Icons">
+    | Permission               | Access Level | Description                                                        |
+    | :----------------------- | :----------- | :----------------------------------------------------------------- |
+    | **Manage Marker Icons**  | WRITE        | Modify marker icons in the old Graphics tool from the Admin panel. |
+    | **Manage Categories**    | WRITE        | Modify marker icon categories in the Admin panel.                  |
+    | **Get Marker Icons**     | READ         | View marker icon categories in the Admin panel.                    |
+    | **Manage Marker Styles** | WRITE        | Manage marker styles in edit mode of the old Graphics tool.        |
+  </Accordion>
+  <Accordion title="MassWrite">
+    | Permission                       | Access Level | Description                                              |
+    | :------------------------------- | :----------- | :------------------------------------------------------- |
+    | **Initiate Schedule Mass Write** | WRITE        | Start mass schedule update jobs from the portfolio view. |
+    | **Get Schedules Latest Configs** | READ         | View previous schedule mass-write jobs.                  |
+    | **Get Points Latest Configs**    | READ         | View previous point mass-write jobs.                     |
+    | **Initiate Point Mass Write**    | WRITE        | Start mass point update jobs from the portfolio view.    |
+  </Accordion>
+  <Accordion title="MultiTrend">
+    | Permission                 | Access Level | Description                     |
+    | :------------------------- | :----------- | :------------------------------ |
+    | **Get Trends**             | READ         | Access the Trends module.       |
+    | **Publish Configurations** | WRITE        | Create and publish trend views. |
+  </Accordion>
+  <Accordion title="SchedulesV2">
+    | Permission              | Access Level | Description                                           |
+    | :---------------------- | :----------- | :---------------------------------------------------- |
+    | **Get Schedules**       | READ         | View schedules and details within a building.         |
+    | **Discover Schedules**  | WRITE        | Discover schedules from data sources and import them. |
+    | **Update Schedules**    | WRITE        | Update existing schedules.                            |
+    | **Duplicate Schedules** | WRITE        | Duplicate an existing schedule.                       |
+    | **Create Schedules**    | WRITE        | Create new schedules for devices or systems.          |
+    | **Sync Schedules**      | WRITE        | Sync schedule updates from data sources.              |
+    | **Delete Schedules**    | WRITE        | Delete schedules from the system.                     |
+  </Accordion>
+  <Accordion title="Users">
+    | Permission                    | Access Level | Description                                   |
+    | :---------------------------- | :----------- | :-------------------------------------------- |
+    | **Assign Buildings to Users** | WRITE        | Assign buildings to users in the Admin panel. |
+    | **Get Users**                 | READ         | View user list in the Admin panel.            |
+    | **Create Users**              | WRITE        | Create new users in the Admin panel.          |
+    | **Delete Users**              | WRITE        | Delete users in the Admin panel.              |
+  </Accordion>
+</AccordionGroup>
+
+**Modules**
+
+Each Submodule lists its available permissions, access level, and description.
+
+**Admin**
+
+| Permission             | Access Level | Description                                     |
+| :--------------------- | :----------- | :---------------------------------------------- |
+| **Access Admin Panel** | READ         | Access the Admin panel from the portfolio view. |
+
+**Audit**
+
+| Permission                 | Access Level | Description                                                |
+| :------------------------- | :----------- | :--------------------------------------------------------- |
+| **Create Audit Templates** | WRITE        | Create new Audit tables in the Admin module of a building. |
+| **Get Audit Templates**    | READ         | Access the Audit module and view created tables.           |
+| **Delete Audit Templates** | WRITE        | Delete Audit tables in the Admin module of a building.     |
+
+**Connectivity**
+
+| Permission        | Access Level | Description                                                  |
+| :---------------- | :----------- | :----------------------------------------------------------- |
+| **Create Tunnel** | WRITE        | Create a tunnel in the Connectivity module.                  |
+| **Delete Tunnel** | WRITE        | Delete an existing tunnel in the Connectivity module.        |
+| **Get Tunnels**   | READ         | View the list of created tunnels in the Connectivity module. |
+
+**Dashboards**
+
+| Permission            | Access Level | Description                                                         |
+| :-------------------- | :----------- | :------------------------------------------------------------------ |
+| **Get Dashboards**    | READ         | View the Dashboards module at building level (Old Dashboards tool). |
+| **Create Dashboards** | WRITE        | Create dashboards within a building (Old Dashboards tool).          |
+| **Delete Dashboards** | WRITE        | Delete dashboards within a building.                                |
+| **Share Widgets**     | WRITE        | Create a shareable link for a widget in a dashboard.                |
+
+**Deployment_Audit**
+
+| Permission                              | Access Level | Description                                              |
+| :-------------------------------------- | :----------- | :------------------------------------------------------- |
+| **Get Deployment Audit Reports**        | READ         | Access the Deployment Audit module.                      |
+| **Get Deployment Audit Report Details** | READ         | View Deployment Audit reports for a specific building.   |
+| **Create Deployment Audit Report**      | WRITE        | Create Deployment Audit reports for a specific building. |
+
+**Energy_Dashboard**
+
+| Permission               | Access Level | Description                                        |
+| :----------------------- | :----------- | :------------------------------------------------- |
+| **Get Energy Dashboard** | READ         | Access the old Energy Dashboard from the main bar. |
+
+**FDDV2**
+
+| Permission                                            | Access Level | Description                                                                             |
+| :---------------------------------------------------- | :----------- | :-------------------------------------------------------------------------------------- |
+| **Notify Users Through Phone Call**                   | READ         | Initiate phone calls to notify users about important events requiring immediate action. |
+| **Notify Users Through Text Message**                 | READ         | Send SMS alerts for real-time event notifications.                                      |
+| **Get FDD Events**                                    | READ         | Track events and receive associated notifications.                                      |
+| **Get FDD Routines**                                  | READ         | View custom routines used for equipment monitoring.                                     |
+| **Get FDD Configs**                                   | READ         | View Fault Detection and Diagnostics (FDD) configurations.                              |
+| **Get FDD Notification Policy**                       | READ         | View notification policies defining recipients and delivery methods.                    |
+| **Acknowledge FDD Events**                            | WRITE        | Mark events as acknowledged to signal that the issue is being handled.                  |
+| **Create FDD Notification Policy**                    | WRITE        | Create building-level notification policies.                                            |
+| **Delete FDD Notification Policy**                    | WRITE        | Delete building-level notification policies.                                            |
+| **Create FDD Portfolio Notification Policy**          | WRITE        | Create portfolio-level notification policies for reuse across buildings.                |
+| **Delete FDD Portfolio Notification Policy**          | WRITE        | Delete portfolio-level notification policies.                                           |
+| **Create FDD Routines**                               | WRITE        | Create custom routines with logic-block programming for automating operations.          |
+| **Create FDD Configs**                                | WRITE        | Configure equipment monitoring and alert thresholds.                                    |
+| **Delete FDD Routines**                               | WRITE        | Delete custom-created routines (from user library only).                                |
+| **Import / Export FDD Routines**                      | WRITE        | Import and export routines between portfolios.                                          |
+| **Update FDD Portfolio Dashboard Filter Preferences** | WRITE        | Set default filters on portfolio dashboards for all users.                              |
+| **Update FDD Building Dashboard Filter Preferences**  | WRITE        | Set default filters for building dashboards.                                            |
+| **Update FDD Ack Event Preferences**                  | WRITE        | Define portfolio SLA response times and comment requirements.                           |
+| **Send External-Push**                                | WRITE        | Send manual push notifications to third-party systems.                                  |
+| **Update / Hide Priorities**                          | WRITE        | Customize priority names and colors at portfolio level.                                 |
+
+**FTT**
+
+| Permission                                            | Access Level | Description                                                          |
+| :---------------------------------------------------- | :----------- | :------------------------------------------------------------------- |
+| **Get FTT Workflows**                                 | READ         | View custom workflows for functional testing.                        |
+| **Create FTT Workflows**                              | WRITE        | Create custom testing workflows using logic-block tools.             |
+| **Delete FTT Workflow**                               | WRITE        | Delete user-created workflows (does not affect shared library).      |
+| **Archive FTT Tests**                                 | WRITE        | Archive test results for organization.                               |
+| **Run Manual Test**                                   | WRITE        | Perform manual device-level tests.                                   |
+| **Import / Export FTT Workflows**                     | WRITE        | Manage workflow libraries across portfolios.                         |
+| **Update FTT Concurrently Running Test Limit**        | READ         | Set the maximum number of devices tested simultaneously (1–5).       |
+| **Get FTT Projects**                                  | READ         | View all FTT projects linked to a building or portfolio.             |
+| **Run / Stop Tasks Manually**                         | WRITE        | Manually start or stop testing tasks after a schedule starts.        |
+| **Create FTT Projects**                               | WRITE        | Schedule tests across devices and floors for comprehensive coverage. |
+| **Update FTT Portfolio Dashboard Filter Preferences** | WRITE        | Set default portfolio-level filters on dashboards.                   |
+| **Update FTT Building Dashboard Filter Preferences**  | WRITE        | Set default building-level filters on dashboards.                    |
+| **Get FTT History**                                   | READ         | View test results for monitoring and analysis.                       |
+
+**GraphicsV1**
+
+| Permission                | Access Level | Description                                                   |
+| :------------------------ | :----------- | :------------------------------------------------------------ |
+| **Get Old Graphics (V1)** | READ         | View old graphics in system and device details (legacy tool). |
+
+**GraphicsV2**
+
+| Permission        | Access Level | Description                                                                           |
+| :---------------- | :----------- | :------------------------------------------------------------------------------------ |
+| **Get Graphics**  | READ         | View new graphics in system and device details.                                       |
+| **Edit Graphics** | WRITE        | Access and edit floorplans, systems, and device graphics using the new Graphics tool. |
+
+**Marker_Icons**
+
+| Permission               | Access Level | Description                                                        |
+| :----------------------- | :----------- | :----------------------------------------------------------------- |
+| **Manage Marker Icons**  | WRITE        | Modify marker icons in the old Graphics tool from the Admin panel. |
+| **Manage Categories**    | WRITE        | Modify marker icon categories in the Admin panel.                  |
+| **Get Marker Icons**     | READ         | View marker icon categories in the Admin panel.                    |
+| **Manage Marker Styles** | WRITE        | Manage marker styles in edit mode of the old Graphics tool.        |
+
+**MassWrite**
+
+| Permission                       | Access Level | Description                                              |
+| :------------------------------- | :----------- | :------------------------------------------------------- |
+| **Initiate Schedule Mass Write** | WRITE        | Start mass schedule update jobs from the portfolio view. |
+| **Get Schedules Latest Configs** | READ         | View previous schedule mass-write jobs.                  |
+| **Get Points Latest Configs**    | READ         | View previous point mass-write jobs.                     |
+| **Initiate Point Mass Write**    | WRITE        | Start mass point update jobs from the portfolio view.    |
+
+**MultiTrend**
+
+| Permission                 | Access Level | Description                     |
+| :------------------------- | :----------- | :------------------------------ |
+| **Get Trends**             | READ         | Access the Trends module.       |
+| **Publish Configurations** | WRITE        | Create and publish trend views. |
+
+**SchedulesV2**
+
+| Permission              | Access Level | Description                                           |
+| :---------------------- | :----------- | :---------------------------------------------------- |
+| **Get Schedules**       | READ         | View schedules and details within a building.         |
+| **Discover Schedules**  | WRITE        | Discover schedules from data sources and import them. |
+| **Update Schedules**    | WRITE        | Update existing schedules.                            |
+| **Duplicate Schedules** | WRITE        | Duplicate an existing schedule.                       |
+| **Create Schedules**    | WRITE        | Create new schedules for devices or systems.          |
+| **Sync Schedules**      | WRITE        | Sync schedule updates from data sources.              |
+| **Delete Schedules**    | WRITE        | Delete schedules from the system.                     |
+
+**Users**
+
+| Permission                    | Access Level | Description                                   |
+| :---------------------------- | :----------- | :-------------------------------------------- |
+| **Assign Buildings to Users** | WRITE        | Assign buildings to users in the Admin panel. |
+| **Get Users**                 | READ         | View user list in the Admin panel.            |
+| **Create Users**              | WRITE        | Create new users in the Admin panel.          |
+| **Delete Users**              | WRITE        | Delete users in the Admin panel.              |
+
+## Set up Authentication and Single Sign-On
+
+**Single Sign-On (SSO)** allows users to log in to KODE OS with their existing organization credentials instead of separate KODE Labs accounts.\
+Launchpad supports industry-standard protocols, **OpenID Connect (OIDC)** and **Security Assertion Markup Language (SAML)** — to connect with your identity management platform.
+
+When SSO is enabled:
+
+- Users authenticate through your organization’s **IdP** (e.g., Azure AD, Okta, CyberArk, Auth0, or JumpCloud).
+- Access to KODE OS and related apps is automatically granted once verified.
+- Administrators retain centralized control over user access and permissions.
+
+**Before you begin**
+
+To enable Single Sign-On (SSO) for your organization, ensure you have:
+
+- **Admin role** in your KODE Labs workspace.
+- Access to your **Identity Provider (IdP)** configuration settings.
+- One of the following authentication protocols is available:
+  - **SAML 2.0**
+  - **OpenID Connect (OIDC)**
+
+<Accordion title="Set up SSO in Launchpad">
+  1. In **Launchpad**, open the sidebar and click **Sign-in Methods**.\
+     The **Sign-in Methods** page displays all configured IAM methods.
+  2. Click **\+ Add Sign-in Method**.
+  3. Select an existing template or choose a **custom method (OIDC or SAML)**.
+  4. In **Sign-in Method Name**, enter a unique name for this connection.
+  5. Review the auto-generated fields — **Assertion Consumer Service URL**, **SP Entity ID**, **Protocol Binding**, and **Signature Algorithm**.
+
+     > 💡 Copy these values; you’ll need them in your IdP setup later.
+  6. Enter any additional required information based on your IdP.
+  7. Click **Save**.
+</Accordion>
+
+<Accordion title="Configure the KODE Labs app in your IdP">
+  1. Log in to your IdP account.
+  2. Create a new application or connector.
+  3. Provide the configuration details generated by Launchpad:
+     - **Single Sign-on URL:** The Assertion Consumer Service URL from Launchpad.
+     - **Entity ID:** The SP Entity ID or Audience URI.
+     - **NameID Format:** _EmailAddress_.
+     - **Signature Algorithm:** _RSA-SHA256_.
+     - **Protocol Binding:** _HTTP-POST_.
+  4. Under **Attribute Mapping**, add the following:
+     - _First name_ attribute or claim.
+     - _Last name_ attribute or claim.
+     - Optional **roles** attribute to map IdP roles to KODE OS roles.
+  5. Save your configuration.
+  6. Copy your **IdP Single Sign-On URL** and **x509Certificate** (or download the metadata file).
+</Accordion>
+
+<Accordion title="Configure IdP details in Launchpad">
+  1. Return to **Launchpad → Sign-in Methods**.
+  2. Select your new SSO configuration.
+  3. Upload your **Metadata file**, or manually enter:
+     - **IdP URL**
+     - **Certificate (x509)**
+     - **Attribute Configuration**
+  4. Click **Save**.
+</Accordion>
+
+SSO is now active. Users can log in through your organization’s IdP instead of separate KODE OS credentials.
+
+<Accordion title="Configure role mapping">
+  1. Before mapping, ensure role attributes exist in your IdP’s **Attribute Mappings**.
+  2. In **Launchpad**, go to **Sign-in Methods → Role Mapping**.
+  3. Click **\+ Assign Role(s)**.
+  4. In the dialog, enter:
+     - **IdP Role Identifier** — the name or UID of the IdP group.
+     - **Launchpad Role** — required.
+     - **myMSI / KODE OS Roles** — optional.
+  5. Click **Assign Role(s)**.
+
+  ### Notes
+
+  - Once IdP role mapping is enabled, role management for those users occurs in your IdP, not in KODE Labs.
+  - You can enable:
+    - **Create user on first login** — automatically create users on first sign-in.
+    - **Default Role** — assign a fallback role for unmapped users.
+    - **Update user role on login** — synchronize IdP role changes.
+    - **Site Mapping** — link access to specific sites after saving.
+</Accordion>
+
+<Accordion title="Edit SSO configuration">
+  1. In **Launchpad**, open **Sign-in Methods**.
+  2. Select the IAM method you want to modify.
+  3. Click **Edit** at the top-right corner of the **SSO Details** section.
+  4. UpdatLog in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:Log in through Single Sign-On
+
+     Users can log in to KODE OS in two ways:e configuration fields such as **Entity ID**, **IdP URL**, or **Certificate**.
+  5. Upload new metadata if available.
+  6. Click **Save**.
+</Accordion>
+
+### Log in through Single Sign-On
+
+There are two ways to sign in to the building environment: 
+
+<Accordion title="With a workspace URL">
+  1. In a browser, enter your workspace domain (e.g., [_companyname.kodelabs.com_](http://companyname.kodelabs.com)).
+  2. On the Sign-in page, click **Sign in with [your IdP name]**.
+  3. Authenticate using your IdP credentials.
+  4. After authentication, you’re redirected back to your workspace.
+</Accordion>
+
+<Accordion title="Without a workspace URL">
+  1. Visit [**accounts.kodelabs.com**](http://accounts.kodelabs.com).
+  2. Enter your workspace domain and click **Continue**.
+  3. Select your preferred IAM method and sign in through your IdP.
+
+  > 💡 If you forget your workspace domain, click **Find your workspace** and follow the email link to retrieve it.
+</Accordion>
+
+### Add a New IAM Method
+
+You can add additional **Identity and Access Management (IAM)** sign-in methods to Launchpad.\
+This is useful when your organization manages multiple identity providers or needs to support both internal and external user directories.
+
+<Accordion title="Add a new IAM method">
+  1. In **Launchpad**, open the sidebar and click **Sign-in Methods**.\
+     The **Sign-in Methods** page lists all existing IAM methods configured for your organization.
+  2. Click **\+ Add Sign-in Method**.\
+     A pop-up window appears showing available options.
+  3. Select the **IAM method** you want to add and click **Continue**.
+  4. Complete the required configuration fields.
+  5. Click **Save**.
+
+  **Note:** Only users with **Admin** permissions can add or modify IAM methods.
+</Accordion>
+
+<Accordion title="Add a custom IAM method">
+  1. In **Launchpad**, open the **Sign-in Methods** page.
+  2. Click **\+ Add Sign-in Method**, then select **Custom Method**.
+  3. Copy the **Authentication Callback URL** from Launchpad and paste it into your SSO provider’s configuration page.
+  4. In your provider platform, generate the following information:
+     - **OpenID Well-Known URL**
+     - **Client ID**
+     - **Client Secret**
+  5. Return to Launchpad and enter these values in the corresponding fields.
+  6. (Optional) To make this method the default, select **Set as Default Sign-In Method**.
+  7. Click **Save**.
+
+  **Tip:** When new users are added, they’re assigned to the **default IAM method** by default.\
+  You can change the method manually during user creation by selecting **Change Method**.
+</Accordion>
+
+Your organization now supports multiple IAM sign-in methods.\
+You can manage or set the default sign-in method anytime under **Sign-in Methods** in Launchpad.
+
+### Reference: Supported parameters
+
+**SAML Required Fields**
+
+| Parameter           | Type          | Description                                       |
+| :------------------ | :------------ | :------------------------------------------------ |
+| **IdP Entity ID**   | Set by client | Unique identifier of the directory.               |
+| **IdP URL**         | URL           | Authentication endpoint for SAML requests.        |
+| **x509Certificate** | .pem or .der  | Public certificate for validating SAML responses. |
+
+**OIDC Required Fields**
+
+| Parameter                 | Type          | Description                                            |
+| :------------------------ | :------------ | :----------------------------------------------------- |
+| **OpenID Well-Known URL** | URL           | Authentication endpoint for your directory instance.   |
+| **Client ID**             | Hex string    | Public identifier of your app.                         |
+| **Client Secret**         | 256-bit value | Secret used to authorize between KODE OS and your IdP. |
+
+## Authentication & Security
+
+**Authentication & Security **lets administrators manage organization-wide sign-in and session policies.\
+It is available under **Security Settings \>\> Authentication & Security** and includes three key tabs:\
+**Multifactor Authentication (MFA)**, **Password**, and **Timeout Settings**.
+
+These settings strengthen access control across KODE OS and Launchpad by enforcing secure authentication, password policies, and session limits.
+
+### **Multifactor Authentication (MFA)**
+
+MFA adds a verification step beyond username and password.\
+When a user signs in from a new device or application, they are prompted to verify their identity using a second factor, such as a unique code from an authenticator app or a text message.\
+This reduces the risk of unauthorized account access.
+
+**How MFA Works**
+
+On first sign-in from a new device:
+
+1. The user enters their username and password.
+2. They are prompted to enter a second authentication factor. For example, a one-time code from their authenticator app or received via SMS.
+3. Once verified, the device is recognized for subsequent logins based on the configured MFA frequency.
+
+Enabling MFA adds an essential layer of protection against credential compromise.
+
+**Customize MFA Settings**
+
+You can configure MFA behavior from **Security Settings \>\> Authentication & Security \>\> MFA**.
+
+<img
+  src=""
+  alt="Screenshot to be uploaded"
+  title="Screenshot 2025-11-09 at 14.18.16.png"
+  style={{ width:"71%" }}
+/>
+
+- **Enforcement:** Choose whether to enforce MFA for all users or allow individual users to enable it themselves.
+
+  <Note>
+    SSO-authenticated users are excluded from this enforcement.
+  </Note>
+- **Frequency:** Define how often MFA prompts appear, at every login.
+
+<Accordion title="FAQs">
+  **Is MFA required for users logging in with email and password?**\
+  Yes, when configured, only users signing in with email and password (not SSO) are required to complete MFA setup and verification.
+
+  **How does MFA handle device recognition?**\
+  The system uses device fingerprinting to identify trusted devices. MFA prompts reappear if users change browsers, clear cookies, or sign in from a new device, regardless of the selected seven-day or thirty-day frequency.
+
+  **Are users prompted to set up MFA after new requirements are added?**\
+  Yes, existing users are asked to configure MFA during their next login once the requirement is enforced.
+
+  **Can users configure MFA for their own accounts?**\
+  Yes, users can set up MFA individually from their account settings. These configurations are validated during login.
+
+  **What happens when an admin configures MFA for the organization?**\
+  Organization-level MFA policies override user settings. If previously selected options are removed, users default to the minimum available enforcement level.
+
+  **How does MFA interact with session timeout?**\
+  If the MFA remember time expires before the session timeout, users are prompted for MFA verification sooner. If it matches or exceeds the session timeout, verification occurs when the session expires.
+
+  **Can admins reset MFA for a user?**\
+  Yes, admins can reset MFA for a user, requiring them to complete setup again during the next login.
+
+  **Can admins disable MFA for a user?**\
+  Yes, admins can disable MFA for a user. New users can sign in without MFA, while existing users remain subject to 2FA until removed from enforcement.
+
+  **Does MFA work across different devices and browsers?**\
+  Yes, MFA functions consistently across supported browsers and mobile devices.
+</Accordion>
+
+### Password Settings
+
+Password policies define how users create and maintain secure credentials.\
+Strong password requirements reduce the likelihood of unauthorized access and credential reuse.\
+All configurations are available under **Security Settings \>\> Authentication & Security \>\> Password**.
+
+<img
+  src="/images/Screenshot2025-11-09at15.03.59.png"
+  alt="Screenshot to be uploaded"
+  title="Screenshot 2025-11-09 at 15.03.59.png"
+  style={{ width:"62%" }}
+/>
+
+**Password Complexity**
+
+You can enforce predefined or custom password complexity rules.
+
+- **Medium:** Minimum 8 characters; includes at least one digit, one uppercase letter, and one special character.
+- **High:** Maximum 12-64 characters; includes at least one digit, one uppercase letter, one special character, and no consecutive characters.
+
+**Customize Password Complexity:**\
+You can define whether passwords must include:
+
+- Uppercase letters (A through Z).
+- Base 10 digits (0 through 9).
+- Non-alphanumeric characters (special characters).
+- Non-consecutive characters.
+
+**Lockout Settings**
+
+T-o temporarily restrict access to a user account after a specified number of unsuccessful sign in attempts:
+
+- **Retries before lockout:** Set how many failed attempts trigger a lockout. For example, allow five unsuccessful sign in attempts before the account enters a locked state.
+- **Lockout time:** Define how long accounts remain locked before users can retry. For example, set the lockout time to one hour to temporarily restrict access while allowing users to regain entry after the specified duration.
+
+**Password Configurations**
+
+- **Password history:** Keeps a record of previously used passwords to prevent reuse and reduce the risk of compromised accounts.
+- **Password expiry time:** Defines when users must update their passwords after a set period.
+
+<Accordion title="FAQs">
+  **Can administrators create custom password policies?**\
+  Yes. Administrators can define custom password rules, including minimum length, required character types, and non-consecutive character enforcement.
+
+  **How does password expiration work?**\
+  When a password reaches its configured expiration period, users are prompted to change it upon their next login.
+
+  **Does the system check for leaked passwords?**\
+  Yes. The system checks passwords against known breached databases and prevents users from using compromised passwords.
+</Accordion>
+
+### Timeout Settings
+
+Timeout policies automatically sign out inactive users to protect sensitive data. \
+Configure them under **Security Settings → Authentication & Security → Timeout**.
+
+<Tip>
+  The timeouts can be configured in **days** or **hours**, depending on organizational needs.
+</Tip>
+
+<img
+  src="/images/Screenshot2025-11-09at14.44.09.png"
+  alt="Screenshot to be added"
+  title="Screenshot 2025-11-09 at 14.44.09.png"
+  style={{ width:"67%" }}
+/>
+
+- **Session Timeout:** Sets the total duration a signed-in session remains active. After this time elapses without any user activity, the user is logged out.
+- **Idle Timeout:** Defines the period of inactivity before automatic sign-out during an active session.
+
+<Accordion title="Session Timeout Settings FAQs">
+  **How are timeouts configured?**\
+  Session and idle timeouts can be set in days or hours. After the configured period of inactivity, users are automatically signed out.
+
+  **What values are supported for timeouts?**\
+  Timeout values must be positive, whole numbers. Non-integer or negative inputs are not accepted.
+</Accordion>
+
+## **Service Account Setup**
+
+Service Account in Launchpad allows secure, automated communication between KODE OS and external systems or integrations.\
+These accounts are designed for system-to-system authentication — not for individual users — and are commonly used for API access, automation, and integration with third-party platforms.
+
+Each service account includes:
+
+- A **credential type,** such as Private Key JWT or Client Secret.
+- **Access scopes** and **permissions** for specific resources.
+- **Keys** with configurable lifecycles and expiration alerts.
+
+**Before you begin**
+
+- **Admin or Super Admin** privileges in Launchpad.
+- Access to **Client Management** in your workspace.
+- (Optional) A list of sites where this service account will operate.
+
+### Accessing the Service Account
+
+To begin creating a Service Account, navigate to its management area in Launchpad, where administrators can view all existing service accounts, create new ones, and manage keys, permissions, and access scopes.
+
+<Tip>
+  Before creating a Service Account or generating keys, review how Launchpad manages its lifecycle.\
+  This helps prevent accidental loss of credentials or access disruptions.
+
+  **Key lifecycle**
+
+  - Disable a key to revoke its access temporarily.
+  - Re-enable a disabled key if needed.
+  - Delete a disabled key to remove it permanently.
+
+  **Service Account lifecycle**
+
+  - Disable the account to suspend all associated keys.
+  - Delete the account only after it’s disabled.
+</Tip>
+
+<Warning>
+  Once deleted, neither a Service Account nor its keys can be recovered.
+</Warning>
+
+1. Log in to **Launchpad**.
+2. From the sidebar, go to **Client Management \>\> Service Accounts**.
+
+<Accordion title="Create a New Service Account">
+  1. Click **\+ Add Service**.
+  2. Enter a **Name**  for the new account.
+  3. Select a **Credential Type**:
+     - **Private Key JWT** is recommended. It uses asymmetric cryptography for secure, automated authentication. It prevents transmitting shared secrets and is preferred for production-grade integrations.
+     - **Client Secret**. It is a shared secret-based method for simpler integrations. 
+  4. Enter **Description**.
+  5. In **Sites**,  either:
+     - **Select All Sites**, or
+     - Specific**Sites**  from the drop-down.
+  6. Click **Save**.
+</Accordion>
+
+After creating a service account, you’re redirected to the **Service Account Details** page. From here, you can create and manage keys.
+
+<Accordion title="Create a Key">
+  <Warning>
+    The **Private Key** is displayed only once. KODE Labs does **not** store it.\
+    Copy and store it in a secure location before closing the dialog.
+  </Warning>
+  1. Click **Generate Private Key**.
+  2. Choose one of the following:
+     - Select**Generate  new key** , or
+     - Paste your own key in JSON format.
+  3. Click **Copy** to retrieve the key. You must store the key in a secure location.
+  4. Click **Save**.
+</Accordion>
+
+<Accordion title="Manage Keys and Expiration" description="Each service account can have multiple keys with independent expiration and notification settings.">
+  1. In the **Keys** list, click the ( \*\*⋮ \*\*) icon. 
+  2. Select **Edit** to update expiration or notification settings.
+  3. Set a **Key Expiration Date** to define the key’s validity period.
+  4. In **Notify Users**, select the user(s) from the drop-down to  notify before the key expires.
+  5. Click **Save**.
+</Accordion>
+
+### Service Account Permissions
+
+You can customize the permissions for each Service Account to control access levels, define integration scopes, and maintain visibility into all system activities.\
+By default, new service accounts have no permissions enabled.
+
+**Permission Scopes and Access Levels**
+
+Permissions are assigned through access levels, which determine what each account can read, write, or create within KODE OS.\
+Common permission scopes include:
+
+- **Read Buildings**. It is required for all other permissions to function.
+- **Read Devices**, **Add Devices**
+- **Read Building Areas**
+- **Read / Add / Write Points**
+- **Read / Create Timeseries**
+
+Each permission can be enabled independently, allowing developers to fine-tune integrations with just the right level of access.
+
+<Accordion title="Manage Permissions for a Service Account">
+  1. Go to ****Service Accounts,  select a service account and clickPermissions**** .
+  2. Click **Edit**.
+  3. Select the \*\*Read \*\*or \*\*Write \*\*permissions for each group. For example, PointsPublic, TimeseriesPublic, and DevicesPublic.
+
+     <Tip>
+       Color indicators show which permissions are active in each section.
+
+       🟢 **Green:** Read enabled\
+       🟠 **Orange:** Write enabled
+     </Tip>
+  4. Click **Save**.
+</Accordion>
+
+<Accordion title="Manage Site Access for a Service Account">
+  You can view and modify which sites a service account can access.
+
+  1. In **KODE OS**, click **Settings** \>\> **Users**.
+  2. Search for the service account by name.
+  3. Click **Buildings.**
+  4. Review the assigned sites.
+  5. To add more sites:
+     - Click **\+ Assign Buildings**.
+     - Select additional sites.
+     - Click **Save**.
+</Accordion>
+
+Service Accounts in Launchpad provide a secure, structured way to manage integrations and control access through keys and permissions. Proper setup and key rotation help ensure safe and efficient API operations.
+
+## Manage Trusted Organizations
+
+Trusted Organizations represent organizations that have established trust settings with your organization.
+
+Manage them from **Security Settings \>\> Trusted Organizations**, which includes two tabs:
+
+- **Outbound**
+
+  List of the organizations that can invite your users as a channel.
+
+  **Displayed columns:**
+  - **Organization Name**
+  - **Organization Domain**
+  - **MFA Setup**: Inherited or Enforced
+
+  If you are a **Channel Partner**, this list includes all your client organizations. Each listed organization has trust settings established with your organization.
+- **Inbound**
+
+  The KODE Labs Admin organization from which KODE Labs has created your organization.
+
+  **Displayed columns:**
+  - **Organization Name**
+  - **Organization Domain**
+  - **MFA Setup**
+  - **Actions**: View and Update
+
+### Update MFA setup
+
+You can update the MFA setup for an organization by clicking on the Pencil icon at the far right of the organization row.
+
+The Update MFA Setup field in the Inbound tab provides options to select between Inherited and Enforced.
+
+- **Inherited**: Guest users from that organization inherit MFA settings from their main organization.
+- **Enforced**: Guest users from that organization must follow your organization’s MFA settings.
