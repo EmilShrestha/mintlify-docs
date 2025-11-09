@@ -205,7 +205,8 @@ When adding or inviting users, assign an appropriate Launchpad role to define th
 
   SSO Configuration:	Access and configure Single Sign-On (SSO) settings for secure authentication.
 - **Restricted Access** provides no Launchpad access but allows channel partners to centrally add
-- and manage users without exposing the full interface.
+
+  and manage users without exposing the full interface.
 
 <AccordionGroup>
   <Accordion title="Add or Invite a User">
@@ -1204,12 +1205,12 @@ Each Submodule lists its available permissions, access level, and description.
 
 ## Set up Authentication and Single Sign-On
 
-**Single Sign-On (SSO)** allows users to log in to KODE OS with their existing organization credentials instead of separate KODE Labs accounts.\
-Launchpad supports industry-standard protocols, **OpenID Connect (OIDC)** and **Security Assertion Markup Language (SAML)** — to connect with your identity management platform.
+Single Sign-On (SSO) allows users to log in to KODE OS with their existing organization credentials instead of separate KODE Labs accounts.\
+Launchpad supports industry-standard protocols, OpenID Connect (OIDC) and Security Assertion Markup Language (SAML) to connect with your identity management platform.
 
 When SSO is enabled:
 
-- Users authenticate through your organization’s **IdP** (e.g., Azure AD, Okta, CyberArk, Auth0, or JumpCloud).
+- Users authenticate through your organization’s Identity Provider (IdP). For example, Azure AD, Okta, CyberArk, Auth0, or JumpCloud. 
 - Access to KODE OS and related apps is automatically granted once verified.
 - Administrators retain centralized control over user access and permissions.
 
@@ -1218,20 +1219,21 @@ When SSO is enabled:
 To enable Single Sign-On (SSO) for your organization, ensure you have:
 
 - **Admin role** in your KODE Labs workspace.
-- Access to your **Identity Provider (IdP)** configuration settings.
-- One of the following authentication protocols is available:
-  - **SAML 2.0**
-  - **OpenID Connect (OIDC)**
+- Access to your IdP configuration settings.
+- One of the following authentication protocols is available: **SAML 2.0 **or**OpenID Connect (OIDC)** .
 
 <Accordion title="Set up SSO in Launchpad">
-  1. In **Launchpad**, open the sidebar and click **Sign-in Methods**.\
-     The **Sign-in Methods** page displays all configured IAM methods.
+  1. In **Launchpad**, open the sidebar and click **Sign-in Methods**.
   2. Click **\+ Add Sign-in Method**.
-  3. Select an existing template or choose a **custom method (OIDC or SAML)**.
+  3. Select one of the following:
+     - In **Add Now Sign-in Method**, select a custom method. 
+     - In **Add from Sign-in Method Template, **select an existing template. 
   4. In **Sign-in Method Name**, enter a unique name for this connection.
-  5. Review the auto-generated fields — **Assertion Consumer Service URL**, **SP Entity ID**, **Protocol Binding**, and **Signature Algorithm**.
+  5. Review the auto-generated fields: **Assertion Consumer Service URL**, **SP Entity ID**, **Protocol Binding**, and **Signature Algorithm**.
 
-     > 💡 Copy these values; you’ll need them in your IdP setup later.
+  <Tip>
+    Copy these values. you’ll need them in your IdP setup.
+  </Tip>
   6. Enter any additional required information based on your IdP.
   7. Click **Save**.
 </Accordion>
@@ -1385,7 +1387,7 @@ You can manage or set the default sign-in method anytime under **Sign-in Methods
 
 ## Authentication & Security
 
-**Authentication & Security **lets administrators manage organization-wide sign-in and session policies.\
+Authentication & Security lets administrators manage organization-wide sign-in and session policies.\
 It is available under **Security Settings \>\> Authentication & Security** and includes three key tabs:\
 **Multifactor Authentication (MFA)**, **Password**, and **Timeout Settings**.
 
@@ -1508,7 +1510,7 @@ T-o temporarily restrict access to a user account after a specified number of un
 ### Timeout Settings
 
 Timeout policies automatically sign out inactive users to protect sensitive data. \
-Configure them under **Security Settings → Authentication & Security → Timeout**.
+Configure them under **Security Settings \>\> Authentication & Security \>\> Timeout**.
 
 <Tip>
   The timeouts can be configured in **days** or **hours**, depending on organizational needs.
