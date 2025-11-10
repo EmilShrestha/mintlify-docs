@@ -1,0 +1,390 @@
+---
+title: "Permissions"
+description: "DesKODE OS permissions are organized by modules to help administrators configure user roles effectively.
+cription of your new file."
+---
+
+
+<Info>
+  - Site-level permissions only apply when a user is assigned to that building.
+  - Portfolio-level permissions apply globally.
+</Info>
+
+For each module, you’ll find a description of what the permission enables and whether it grants view-only or edit access.
+
+<Note>
+  We update permissions as new modules are added to KODE OS.
+</Note>
+
+Permissions are grouped by:
+
+- **Modules**: Functional areas such as BuildingBI or Launchpad.
+- **Submodules**: Specific components under each module, such as Dashboards or Datasources.
+- **Access Levels**: Define what actions can be performed within each submodule.
+
+**Permissions Reference Table**
+
+The permission structure is grouped by module. Each section lists its **submodules**, their **permissions**, **access levels**, and **descriptions**.
+
+#### **BuildingBI**
+
+**Dashboards**
+
+| Permission Name        | Access Level | Description                                                                                                                                                                                                                                                                               |
+| :--------------------- | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manage Collections** | WRITE        | Manage dashboard collections within BuildingBI. Includes:  - Reorder all collections (regardless of access) - Create new collections - Edit existing collections - Delete collections - Publish collections - Manage viewers (adding/removing users with view-only access to collections) |
+| **Get Dashboards**     | READ         | Retrieve and view all dashboards within the BuildingBI module. Visibility can be restricted via:  - Portfolio-level access control - Building-level access control                                                                                                                        |
+| **Create Dashboards**  | WRITE        | Create new dashboards within the BuildingBI module.                                                                                                                                                                                                                                       |
+
+**Datasources**
+
+| Permission                       | Access Level | Description                                                                     |
+| :------------------------------- | :----------- | :------------------------------------------------------------------------------ |
+| **Get Datasources**              | READ         | View all data sources (both physical and virtual) within the BuildingBI module. |
+| **Create Physical Data Sources** | WRITE        | Add data sources.                                                               |
+| **Create Virtual Data Sources**  | WRITE        | Create virtual data sources by writing queries on top of existing data sources. |
+| **Delete Data Sources**          | WRITE        | Delete both physical and virtual data sources from the BuildingBI module.       |
+
+**Sharings**
+
+| Permission               | Access Level | Description                                                                   |
+| :----------------------- | :----------- | :---------------------------------------------------------------------------- |
+| **Share Links**          | READ         | Generate public, shareable links to dashboards or widgets for external users. |
+| **Delete Sharing Links** | WRITE        | Revoke or delete existing public sharing links.                               |
+
+**Templates**
+
+| Permission           | Access Level | Description                                                               |
+| :------------------- | :----------- | :------------------------------------------------------------------------ |
+| **Get Templates**    | READ         | View and select from all available dashboard templates within BuildingBI. |
+| **Create Templates** | WRITE        | Save dashboards or views as templates for reuse.                          |
+| **Delete Templates** | WRITE        | Delete existing templates from the BuildingBI module.                     |
+
+**Buildings **
+
+**Areas**
+
+| Permission                 | Access Level | Description                                                                    |
+| :------------------------- | :----------- | :----------------------------------------------------------------------------- |
+| **Get Areas**              | READ         | View the Areas module in the side panel and list areas within a building.      |
+| **Create Areas**           | WRITE        | Define and create new areas (zones, rooms, floors) within a building.          |
+| **Create Area Dashboards** | WRITE        | Create dashboards specific to an area, accessible within the area detail page. |
+| **Delete Areas**           | WRITE        | Delete existing areas from the building layout.                                |
+| **Delete Area Dashboards** | WRITE        | Delete dashboards created within the context of an area.                       |
+
+**Dashboards**
+
+| Permission            | Access Level | Description                                                                                                     |
+| :-------------------- | :----------- | :-------------------------------------------------------------------------------------------------------------- |
+| **Get Dashboards**    | READ         | View dashboards tied to a building (Old Dashboards tool). Displays the Dashboards module at the building level. |
+| **Create Dashboards** | WRITE        | Create building-level dashboards (Old Dashboards tool).                                                         |
+| **Delete Dashboards** | WRITE        | Delete building-level dashboards (Old Dashboards tool).                                                         |
+
+**Datasources**
+
+| Permission                       | Access Level | Description                                                                                                 |
+| :------------------------------- | :----------- | :---------------------------------------------------------------------------------------------------------- |
+| **Get Data Sources**             | READ         | View the Data Sources module and see all configured sources within a building.                              |
+| **Create Data Sources**          | WRITE        | Create new data sources within the building context.                                                        |
+| **Delete Data Sources**          | WRITE        | Delete existing data sources from a building.                                                               |
+| **Clear Data Source Cache**      | WRITE        | Manually clear cached data of data sources. Useful for refreshing stale or outdated data.                   |
+| **Discover Data Source Devices** | WRITE        | Run device discovery from a data source, and import discovered devices, points, and schedules into KODE OS. |
+
+**Devices**
+
+| Permission                               | Access Level | Description                                                                                                                        |
+| :--------------------------------------- | :----------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| **Manage Device Types**                  | WRITE        | Create, modify, or delete custom device types used across the platform. Accessed via the Admin module.                             |
+| **Manage Device and System Attachments** | WRITE        | Attach or detach devices to systems or locations within a building. Enables relationships such as “device is part of HVAC system.” |
+| **Get Device Graphic Templates**         | READ         | View available device graphic templates (Old Graphics tool) for visual representation of devices.                                  |
+| **Create Device Graphic Templates**      | WRITE        | Create new graphic templates for devices using the legacy graphics tool.                                                           |
+| **Delete Device Graphic Templates**      | WRITE        | Delete existing graphic templates used in the legacy system.                                                                       |
+| **Get Devices**                          | READ         | View the Devices module for a building and access all devices and their associated points.                                         |
+| **Get Device Types**                     | READ         | View all available device types, including system-defined and custom types.                                                        |
+| **Get Linked Devices**                   | READ         | Retrieve lists of linked devices (device-to-device or device-to-system relationships).                                             |
+| **Get Building Device Graphics**         | READ         | View graphical representations of devices from the device details page (Old Graphics tool).                                        |
+| **Update Devices**                       | WRITE        | Modify device configurations, including metadata and mappings.                                                                     |
+| **Delete Devices**                       | WRITE        | Permanently delete devices from the building.                                                                                      |
+| **Delete Device Graphics**               | WRITE        | Delete individual graphics assigned to devices in the Old Graphics tool.                                                           |
+| **Manage Linked Devices**                | WRITE        | Access and manage the Linked Devices module (used with myMSI integration) to create or remove device associations.                 |
+| **Manage Virtual Devices**               | WRITE        | Access the Virtual Devices page and create, update, or delete virtual devices (logical devices built from multiple points).        |
+| **Manage Device and Point Templating**   | WRITE        | Access the Point Templating module and configure device/point mappings to standardized ontology templates.                         |
+| **Update Device Graphics**               | WRITE        | Modify the device’s graphic in the legacy graphics interface (Old Graphics tool).                                                  |
+
+**General**
+
+| Permission                                  | Access Level | Description                                                                                                              |
+| :------------------------------------------ | :----------- | :----------------------------------------------------------------------------------------------------------------------- |
+| **Manage Attachments Related to Buildings** | WRITE        | View, upload, and delete documents or media files attached to buildings, systems, or devices in the Attachments section. |
+| **Get Buildings**                           | READ         | View the list of buildings assigned to a user when logging into KODE OS.                                                 |
+| **Assign Users to Buildings**               | WRITE        | Assign or revoke user access to specific buildings (typically managed by Admins or Portfolio Managers).                  |
+
+**Miscellaneous**
+
+| Permission              | Access Level | Description                                                                                        |
+| :---------------------- | :----------- | :------------------------------------------------------------------------------------------------- |
+| **Get Notifications**   | READ         | Retrieve and view system-generated notifications (alerts, updates, warnings) related to buildings. |
+| **Get Geocode Address** | READ         | Retrieve the geolocation and address of a building using reverse geocoding.                        |
+| **Get Weather Data**    | READ         | Retrieve real-time weather data integrated with the building’s location.                           |
+
+**Points**
+
+| Permission             | Access Level | Description                                                                                               |
+| :--------------------- | :----------- | :-------------------------------------------------------------------------------------------------------- |
+| **Get Points**         | READ         | Access the Points module and view all points (sensors, commands, statuses) associated with devices.       |
+| **Get Point Units**    | READ         | View measurement units associated with points (visible in Admin settings).                                |
+| **Update Points**      | WRITE        | Modify point configurations (rename, reconfigure units, or edit descriptions).                            |
+| **Delete Points**      | WRITE        | Remove points from a device or system.                                                                    |
+| **Write Points**       | WRITE        | Send commands or perform manual overrides on writable points (e.g., temperature setpoints, mode changes). |
+| **Manage Point Units** | WRITE        | Create, edit, or delete custom point units used across devices.                                           |
+
+**Systems**
+
+| Permission         | Access Level | Description                                                                                           |
+| :----------------- | :----------- | :---------------------------------------------------------------------------------------------------- |
+| **Get Systems**    | READ         | Access the Systems module and view lists of mechanical, electrical, or logical systems in a building. |
+| **Create Systems** | WRITE        | Define and create new systems within a building.                                                      |
+| **Delete Systems** | WRITE        | Remove systems and their relationships from a building.                                               |
+
+**Tags**
+
+| Permission      | Access Level | Description                                                                                                      |
+| :-------------- | :----------- | :--------------------------------------------------------------------------------------------------------------- |
+| **Get Tags**    | READ         | View all existing tags in the Admin module.                                                                      |
+| **Create Tags** | WRITE        | Create new tags within the Admin module for classifying assets, devices, and other elements.                     |
+| **Delete Tags** | WRITE        | Delete tags from the Admin module. Tags help categorize and search for building elements like devices or points. |
+
+**EnerG **
+
+**Building Dashboards**
+
+| Permission                           | Access Level | Description                                                                                                                |
+| :----------------------------------- | :----------- | :------------------------------------------------------------------------------------------------------------------------- |
+| **View Building Performance Tab**    | READ         | Access and view energy performance metrics for a specific building, including consumption, efficiency, and trend analysis. |
+| **View Building Cost & Billing Tab** | READ         | View detailed energy cost breakdowns and billing-related metrics for an individual building.                               |
+| **View Building Demand & Load Tab**  | READ         | Access demand response metrics, peak load data, and load profiles at the building level.                                   |
+| **View Building Data Quality Tab**   | READ         | View data completeness and accuracy insights for meters and devices associated with the building.                          |
+| **View Building Carbon Metrics Tab** | READ         | View carbon emissions and environmental impact metrics derived from energy usage.                                          |
+| **View Building Interval Data Tab**  | READ         | Access interval data, such as 15-minute, hourly, for energy readings per building.                                         |
+| **View Building Data Table Tab**     | READ         | View raw or summarized energy data in tabular format at the building level.                                                |
+
+**General**
+
+| Permission          | Access Level | Description                                                                                   |
+| :------------------ | :----------- | :-------------------------------------------------------------------------------------------- |
+| **View Energy Hub** | READ         | Access the **Energy Hub** module that centralizes energy analytics across multiple buildings. |
+| **Edit Energy Hub** | WRITE        | Configure, customize, or update data sources, settings, and KPIs within the Energy Hub.       |
+
+**Portfolio Dashboards**
+
+| Permission                            | Access Level | Description                                                                                   |
+| :------------------------------------ | :----------- | :-------------------------------------------------------------------------------------------- |
+| **View Portfolio Performance Tab**    | READ         | View aggregated energy performance metrics across all buildings in a portfolio.               |
+| **View Portfolio Cost & Billing Tab** | READ         | View total and comparative energy costs and billing summaries across the portfolio.           |
+| **View Portfolio Data Table Tab**     | READ         | Access a tabular view of aggregated energy data across the portfolio for analysis and export. |
+
+**Maintenance **
+
+**Dashboard**
+
+| Permission        | Access Level | Description                                                                                                       |
+| :---------------- | :----------- | :---------------------------------------------------------------------------------------------------------------- |
+| **Get Dashboard** | READ         | Access and view the Maintenance Dashboard, including KPIs and overview metrics related to maintenance activities. |
+
+**General**
+
+| Permission          | Access Level | Description                                                        |
+| :------------------ | :----------- | :----------------------------------------------------------------- |
+| **Get Maintenance** | READ         | Access the Maintenance module to view maintenance-related records. |
+
+**Notification Policies**
+
+| Permission                     | Access Level | Description                                                                     |
+| :----------------------------- | :----------- | :------------------------------------------------------------------------------ |
+| **Get Notification Policies**  | READ         | View existing rules and configurations for automated maintenance notifications. |
+| **Update Notification Policy** | WRITE        | Create, modify, or deactivate maintenance notification policies and rules.      |
+
+**Schedule Logs**
+
+| Permission            | Access Level | Description                                                              |
+| :-------------------- | :----------- | :----------------------------------------------------------------------- |
+| **Get Schedule Logs** | READ         | View the execution history and logs of preventive maintenance schedules. |
+
+**Schedules**
+
+| Permission          | Access Level | Description                                                                          |
+| :------------------ | :----------- | :----------------------------------------------------------------------------------- |
+| **Get Schedules**   | READ         | View the list of preventive maintenance schedules configured for devices or systems. |
+| **Create Schedule** | WRITE        | Define and create new recurring or one-time maintenance schedules.                   |
+| **Run Schedule**    | WRITE        | Manually trigger or execute an existing maintenance schedule.                        |
+| **Delete Schedule** | WRITE        | Delete a maintenance schedule from the system.                                       |
+
+**Task Templates**
+
+| Permission               | Access Level | Description                                                                              |
+| :----------------------- | :----------- | :--------------------------------------------------------------------------------------- |
+| **Get Task Templates**   | READ         | View predefined maintenance task templates that standardize recurring maintenance tasks. |
+| **Create Task Template** | WRITE        | Create new templates for reusable maintenance tasks.                                     |
+| **Delete Task Template** | WRITE        | Delete existing maintenance task templates.                                              |
+
+**Tasks**
+
+| Permission               | Access Level | Description                                                                        |
+| :----------------------- | :----------- | :--------------------------------------------------------------------------------- |
+| **Get Tasks**            | READ         | View all maintenance tasks, including status, assignee, and priority.              |
+| **Create Task**          | WRITE        | Manually create a new maintenance task (ad-hoc or trigger-based).                  |
+| **Update Task Status**   | WRITE        | Change the status of a task (e.g., _Open_, _In Progress_, _Completed_).            |
+| **Update Task Assignee** | WRITE        | Reassign tasks to other users or teams.                                            |
+| **Delete Task**          | WRITE        | Delete an existing maintenance task.                                               |
+| **Create Work Order**    | WRITE        | Create a work order linked to a task for an external vendor or internal execution. |
+
+**Modules**
+
+Each Submodule lists its available permissions, access level, and description.
+
+**Admin**
+
+| Permission             | Access Level | Description                                     |
+| :--------------------- | :----------- | :---------------------------------------------- |
+| **Access Admin Panel** | READ         | Access the Admin panel from the portfolio view. |
+
+**Audit**
+
+| Permission                 | Access Level | Description                                                |
+| :------------------------- | :----------- | :--------------------------------------------------------- |
+| **Create Audit Templates** | WRITE        | Create new Audit tables in the Admin module of a building. |
+| **Get Audit Templates**    | READ         | Access the Audit module and view the created tables.       |
+| **Delete Audit Templates** | WRITE        | Delete Audit tables in the Admin module of a building.     |
+
+**Connectivity**
+
+| Permission        | Access Level | Description                                                  |
+| :---------------- | :----------- | :----------------------------------------------------------- |
+| **Create Tunnel** | WRITE        | Create a tunnel in the Connectivity module.                  |
+| **Delete Tunnel** | WRITE        | Delete an existing tunnel in the Connectivity module.        |
+| **Get Tunnels**   | READ         | View the list of created tunnels in the Connectivity module. |
+
+**Dashboards**
+
+| Permission            | Access Level | Description                                                         |
+| :-------------------- | :----------- | :------------------------------------------------------------------ |
+| **Get Dashboards**    | READ         | View the Dashboards module at building level (Old Dashboards tool). |
+| **Create Dashboards** | WRITE        | Create dashboards within a building (Old Dashboards tool).          |
+| **Delete Dashboards** | WRITE        | Delete dashboards within a building.                                |
+| **Share Widgets**     | WRITE        | Create a shareable link for a widget in a dashboard.                |
+
+**Deployment_Audit**
+
+| Permission                              | Access Level | Description                                              |
+| :-------------------------------------- | :----------- | :------------------------------------------------------- |
+| **Get Deployment Audit Reports**        | READ         | Access the Deployment Audit module.                      |
+| **Get Deployment Audit Report Details** | READ         | View Deployment Audit reports for a specific building.   |
+| **Create Deployment Audit Report**      | WRITE        | Create Deployment Audit reports for a specific building. |
+
+**Energy_Dashboard**
+
+| Permission               | Access Level | Description                                        |
+| :----------------------- | :----------- | :------------------------------------------------- |
+| **Get Energy Dashboard** | READ         | Access the old Energy Dashboard from the main bar. |
+
+**FDDV2**
+
+| Permission                                            | Access Level | Description                                                                             |
+| :---------------------------------------------------- | :----------- | :-------------------------------------------------------------------------------------- |
+| **Notify Users Through Phone Call**                   | READ         | Initiate phone calls to notify users about important events requiring immediate action. |
+| **Notify Users Through Text Message**                 | READ         | Send SMS alerts for real-time event notifications.                                      |
+| **Get FDD Events**                                    | READ         | Track events and receive associated notifications.                                      |
+| **Get FDD Routines**                                  | READ         | View custom routines used for equipment monitoring.                                     |
+| **Get FDD Configs**                                   | READ         | View Fault Detection and Diagnostics (FDD) configurations.                              |
+| **Get FDD Notification Policy**                       | READ         | View notification policies defining recipients and delivery methods.                    |
+| **Acknowledge FDD Events**                            | WRITE        | Mark events as acknowledged to signal that the issue is being handled.                  |
+| **Create FDD Notification Policy**                    | WRITE        | Create building-level notification policies.                                            |
+| **Delete FDD Notification Policy**                    | WRITE        | Delete building-level notification policies.                                            |
+| **Create FDD Portfolio Notification Policy**          | WRITE        | Create portfolio-level notification policies for reuse across buildings.                |
+| **Delete FDD Portfolio Notification Policy**          | WRITE        | Delete portfolio-level notification policies.                                           |
+| **Create FDD Routines**                               | WRITE        | Create custom routines with logic-block programming for automating operations.          |
+| **Create FDD Configs**                                | WRITE        | Configure equipment monitoring and alert thresholds.                                    |
+| **Delete FDD Routines**                               | WRITE        | Delete custom-created routines (from user library only).                                |
+| **Import / Export FDD Routines**                      | WRITE        | Import and export routines between portfolios.                                          |
+| **Update FDD Portfolio Dashboard Filter Preferences** | WRITE        | Set default filters on portfolio dashboards for all users.                              |
+| **Update FDD Building Dashboard Filter Preferences**  | WRITE        | Set default filters for building dashboards.                                            |
+| **Update FDD Ack Event Preferences**                  | WRITE        | Define portfolio SLA response times and comment requirements.                           |
+| **Send External-Push**                                | WRITE        | Send manual push notifications to third-party systems.                                  |
+| **Update / Hide Priorities**                          | WRITE        | Customize priority names and colors at portfolio level.                                 |
+
+**FTT**
+
+| Permission                                            | Access Level | Description                                                          |
+| :---------------------------------------------------- | :----------- | :------------------------------------------------------------------- |
+| **Get FTT Workflows**                                 | READ         | View custom workflows for functional testing.                        |
+| **Create FTT Workflows**                              | WRITE        | Create custom testing workflows using logic-block tools.             |
+| **Delete FTT Workflow**                               | WRITE        | Delete user-created workflows (does not affect shared library).      |
+| **Archive FTT Tests**                                 | WRITE        | Archive test results for organization.                               |
+| **Run Manual Test**                                   | WRITE        | Perform manual device-level tests.                                   |
+| **Import / Export FTT Workflows**                     | WRITE        | Manage workflow libraries across portfolios.                         |
+| **Update FTT Concurrently Running Test Limit**        | READ         | Set the maximum number of devices tested simultaneously (1–5).       |
+| **Get FTT Projects**                                  | READ         | View all FTT projects linked to a building or portfolio.             |
+| **Run / Stop Tasks Manually**                         | WRITE        | Manually start or stop testing tasks after a schedule starts.        |
+| **Create FTT Projects**                               | WRITE        | Schedule tests across devices and floors for comprehensive coverage. |
+| **Update FTT Portfolio Dashboard Filter Preferences** | WRITE        | Set default portfolio-level filters on dashboards.                   |
+| **Update FTT Building Dashboard Filter Preferences**  | WRITE        | Set default building-level filters on dashboards.                    |
+| **Get FTT History**                                   | READ         | View test results for monitoring and analysis.                       |
+
+**GraphicsV1**
+
+| Permission                | Access Level | Description                                                   |
+| :------------------------ | :----------- | :------------------------------------------------------------ |
+| **Get Old Graphics (V1)** | READ         | View old graphics in system and device details (legacy tool). |
+
+**GraphicsV2**
+
+| Permission        | Access Level | Description                                                                           |
+| :---------------- | :----------- | :------------------------------------------------------------------------------------ |
+| **Get Graphics**  | READ         | View new graphics in system and device details.                                       |
+| **Edit Graphics** | WRITE        | Access and edit floorplans, systems, and device graphics using the new Graphics tool. |
+
+**Marker_Icons**
+
+| Permission               | Access Level | Description                                                        |
+| :----------------------- | :----------- | :----------------------------------------------------------------- |
+| **Manage Marker Icons**  | WRITE        | Modify marker icons in the old Graphics tool from the Admin panel. |
+| **Manage Categories**    | WRITE        | Modify marker icon categories in the Admin panel.                  |
+| **Get Marker Icons**     | READ         | View marker icon categories in the Admin panel.                    |
+| **Manage Marker Styles** | WRITE        | Manage marker styles in edit mode of the old Graphics tool.        |
+
+**MassWrite**
+
+| Permission                       | Access Level | Description                                              |
+| :------------------------------- | :----------- | :------------------------------------------------------- |
+| **Initiate Schedule Mass Write** | WRITE        | Start mass schedule update jobs from the portfolio view. |
+| **Get Schedules Latest Configs** | READ         | View previous schedule mass-write jobs.                  |
+| **Get Points Latest Configs**    | READ         | View previous point mass-write jobs.                     |
+| **Initiate Point Mass Write**    | WRITE        | Start mass point update jobs from the portfolio view.    |
+
+**MultiTrend**
+
+| Permission                 | Access Level | Description                     |
+| :------------------------- | :----------- | :------------------------------ |
+| **Get Trends**             | READ         | Access the Trends module.       |
+| **Publish Configurations** | WRITE        | Create and publish trend views. |
+
+**SchedulesV2**
+
+| Permission              | Access Level | Description                                           |
+| :---------------------- | :----------- | :---------------------------------------------------- |
+| **Get Schedules**       | READ         | View schedules and details within a building.         |
+| **Discover Schedules**  | WRITE        | Discover schedules from data sources and import them. |
+| **Update Schedules**    | WRITE        | Update existing schedules.                            |
+| **Duplicate Schedules** | WRITE        | Duplicate an existing schedule.                       |
+| **Create Schedules**    | WRITE        | Create new schedules for devices or systems.          |
+| **Sync Schedules**      | WRITE        | Sync schedule updates from data sources.              |
+| **Delete Schedules**    | WRITE        | Delete schedules from the system.                     |
+
+**Users**
+
+| Permission                    | Access Level | Description                                   |
+| :---------------------------- | :----------- | :-------------------------------------------- |
+| **Assign Buildings to Users** | WRITE        | Assign buildings to users in the Admin panel. |
+| **Get Users**                 | READ         | View user list in the Admin panel.            |
+| **Create Users**              | WRITE        | Create new users in the Admin panel.          |
+| **Delete Users**              | WRITE        | Delete users in the Admin panel.              |
