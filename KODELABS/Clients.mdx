@@ -208,33 +208,37 @@ When adding or inviting users, assign an appropriate Launchpad role to define th
 
   and manage users without exposing the full interface.
 
-<AccordionGroup>
-  <Accordion title="Add or Invite a User">
-    Add new users to your organization or invite users from trusted external organizations.
+<Accordion title="Add or Invite Users to Your Organization">
+  Add new users to your organization or invite users from trusted external organizations.
 
-    <Warning>
-      You can only invite users who already have accounts under one of your **Trusted Organizations**.
-    </Warning>
-    1. In **Launchpad**, click **Users**.
-    2. Click **\+ New User**.
-    3. Choose one of the following:
-       - **Add User**: Create a new user within your organization (temporary or permanent).
-       - **Invite User**: Invite a user from a trusted organization to collaborate (temporary or permanent).
-  </Accordion>
+  <Warning>
+    You can only invite users who already have accounts under one of your Trusted Organizations.
+  </Warning>
+  1. In **Launchpad**, click **Users**.
+  2. Click **\+ New User**.
+  3. Choose one of the following from the drop-down:
+
+          a. **Add User**: Add a new user temporarily or permanently. 
+
+                         
+
+  <Warning>
+    Adding a user requires admin privileges in Launchpad.
+  </Warning>
   <Accordion title="Add a User">
-    Adding a user  requires admin privileges in Launchpad.
-
-    3. In **General Information**, enter the required details of the user. Fields marked with an asterisk (\*) are mandatory.
+    1. In **General Information**, enter the required details of the user. Fields marked with an asterisk (\*) are mandatory.
     2. In **Assign Apps**, select the app(s) to assign and their respective roles.\
        For **KODE OS**, also assign the applicable **Sites**.
     3. Click **Save User**.
   </Accordion>
-  <Accordion title="Invite a user">
-    3. In **General Information**, enter the required details of the user. Fields marked with an asterisk (\*) are mandatory.
+       b. **Invite User**: Invite a user to collaborate temporarily or permanently.
+
+  <Accordion title="Invite a User">
+    1. In **General Information**, enter the required details of the user. Fields marked with an asterisk (\*) are mandatory.
     2. In **Assign Apps**, choose the app(s) and roles to assign.
     3. Click **Invite User**.
   </Accordion>
-</AccordionGroup>
+</Accordion>
 
 <Accordion title="Bulk Import Users">
   Import multiple users at once using a `.xlsx` file. All listed users are automatically added to your organization.
@@ -395,7 +399,7 @@ This approach keeps access control consistent across systems and allows IT admin
 
           b.**Launchpad Role**  (required)
 
-         
+        
 
           c. **myMSI** and **KODE OS** roles (optional)
   6. Click **Assign Role(s)**.
