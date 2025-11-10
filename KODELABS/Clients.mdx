@@ -201,14 +201,7 @@ When adding or inviting users, assign an appropriate Launchpad role to define th
   </Warning>
   1. In **Launchpad**, click **Users**.
   2. Click **\+ New User**.
-  3. Choose one of the following from the drop-down:
-
-          
-
-                                                                         
-
-     a. **Add User**: Add a new user temporarily or permanently.          
-
+  3. Choose one of the following from the drop-down:                                     a. **Add User**: Add a new user temporarily or permanently.          
   <Warning>
     Adding a user requires admin privileges in Launchpad.
   </Warning>
@@ -308,7 +301,7 @@ Available roles for Clients:
 
 Use roles and permissions in Launchpad to control who can access and manage KODE OS modules and data. Administrators can view existing roles, add new ones, and assign the right permissions for each user.
 
-### Why Roles Matter
+### Why roles matter
 
 Roles keep the workspace secure and organized. They determine who can manage buildings, dashboards, or automations, and who can simply view them.\
 Launchpad uses **Role-Based Access Control (RBAC)** to manage user access.\
@@ -361,7 +354,7 @@ Instead of assigning individual permissions to each user, permissions are groupe
   1. Click **Yes, Delete**.
 </Accordion>
 
-### Understanding Role Mapping
+### Understanding role mapping (for SSO Integration)
 
 When **Single Sign-On (SSO)** is enabled, your organization’s **Identity Provider (IdP)** can directly map its internal roles to KODE OS roles.\
 That means:
@@ -371,21 +364,16 @@ That means:
 
 This approach keeps access control consistent across systems and allows IT admins to manage roles from a single source.
 
-<Accordion title="Map User Roles">
+<Accordion title="Map user roles">
   1. In **Launchpad**, click **Sign-in Methods**.
   2. Select the authentication method to configure.
   3. Open the **Role Mapping** tab.
   4. Click **\+ Assign Role(s)**.
-  5. Enter the following details.      
-
-  - **Role Name / IdP Role Identifier**. The name or UID of the IdP group.
-  - **Launchpad Role** is required.
-  - **myMSI** and **KODE OS** roles are optional.
-
+  5. Enter the following details.       a. **Role Name / IdP Role Identifier**. The name or UID of the IdP group. b.**Launchpad Role** is required. c. **myMSI** and **KODE OS** roles is optional.
   6. Click **Assign Role(s)**.
 </Accordion>
 
-### Understanding Permission Structure
+### How permissions are structured
 
 **Permissions** define what a user can do within a module or submodule of KODE OS.\
 Each permission is tied to a role which grants users their effective access.
@@ -447,15 +435,15 @@ Permissions are grouped by:
 - **Submodules**: Specific components under each module, such as Dashboards or Datasources.
 - **Access Levels**: Define what actions can be performed within each submodule.
 
-The tables list every permission available in KODE OS, along with what each allows a user to do.
+The tables below list every permission available in KODE OS, along with what each allows a user to do.
 
 **Permissions Reference Table**
 
 The detailed permission structure is grouped by module. Each section lists its **submodules**, their **permissions**, **access levels**, and **descriptions**.
 
-**BuildingBI**
+**BuildingBI Module**
 
-BuildingBI  provides advanced analytics and data visualization tools for buildings in KODE OS. It allows users to create dashboards, connect data sources, and monitor building performance in real time, helping teams make informed, data-driven decisions about their facilities.
+It controls access to dashboards and data sources across buildings.
 
 <AccordionGroup>
   <Accordion title="Dashboards">
@@ -488,9 +476,7 @@ BuildingBI  provides advanced analytics and data visualization tools for buildin
   </Accordion>
 </AccordionGroup>
 
-\*\*Buildings \*\*
-
-Buildings serve as the core area for managing all physical sites within KODE OS. It allows users to view, add, and organize buildings, configure systems and devices, and control who has access to each site, ensuring centralized, efficient management across all facilities.
+**Buildings Module**
 
 <AccordionGroup>
   <Accordion title="Areas">
@@ -578,9 +564,7 @@ Buildings serve as the core area for managing all physical sites within KODE OS.
   </Accordion>
 </AccordionGroup>
 
-**EnerG**
-
-EnerG provides insights into energy consumption, cost, and performance across buildings and portfolios. It helps users monitor energy usage trends, track carbon impact, and identify opportunities for efficiency, supporting data-driven sustainability and cost optimization.
+**EnerG Module**
 
 <AccordionGroup>
   <Accordion title="Building Dashboards">
@@ -609,9 +593,7 @@ EnerG provides insights into energy consumption, cost, and performance across bu
   </Accordion>
 </AccordionGroup>
 
-**Maintenance**
-
-Maintenance helps users manage preventive and corrective maintenance activities across buildings. It allows you to schedule tasks, track work orders, automate notifications, and monitor equipment performance, ensuring smooth operations and reduced downtime.
+**Maintenance Module**
 
 <AccordionGroup>
   <Accordion title="Dashboard">
@@ -664,7 +646,7 @@ Maintenance helps users manage preventive and corrective maintenance activities 
 
 **Modules**
 
-Modules provide access to core administrative features in KODE OS. It allows users to manage system-level configurations, integrations, and operational components such as audits, connectivity, dashboards, and user management.
+Each Submodule lists its available permissions, access level, and description.
 
 <AccordionGroup>
   <Accordion title="Admin">
@@ -834,28 +816,28 @@ To enable Single Sign-On (SSO) for your organization, ensure you have:
        style={{ width:"39%" }}
      />
 
-     Selecting a Sign in Method
+     _Selecting a Sign in Method_
   4. In **Sign-in Method Name**, enter a unique name for this connection.
   5. Review the auto-generated fields: **Assertion Consumer Service URL**, **SP Entity ID**, **Protocol Binding**, and **Signature Algorithm**.
 
   <Tip>
-    Copy these values. You’ll need them in your IdP setup.
+    Copy these values. you’ll need them in your IdP setup.
   </Tip>
   6. Enter any additional required information based on your IdP.
   7. Click **Save**.
 </Accordion>
 
-<Accordion title="Configure KODE Labs in IdP">
-  You’ll need the values that were auto-generated during the SSO setup in Launchpad which identifiy the organization and enable the connection between the IdP and KODE OS.
+<Accordion title="Configure the KODE Labs app in your IdP">
+  You’ll need the values that were auto-generated during the SSO setup in Launchpad which identifies your organization and enables the connection between the IdP and KODE OS.
 
   1. Log in to your IdP account. For example, Azure AD and Okta.
   2. Create a new application or connector.
   3. Provide the configuration details generated by Launchpad:
      - Enter**Single Sign-on URL.**  The Assertion Consumer Service URL from Launchpad.
-     - In **Entity ID** , enter the **SP Entity ID**, **Audience URI**, or **SAML Issuer ID**. 
-     - In **NameID Format** , select or enter **EmailAddress**. It defines the parameter that your IdP should use to identify KODE Labs users. 
+     - In**Entity ID** , enter the **SP Entity ID**, **Audience URI**, or **SAML Issuer ID**. 
+     - In**NameID Format** , select or enter **EmailAddress**. It defines the parameter that your IdP should use to identify KODE Labs users. 
      - In **Signature Algorithm**, select **RSA-SHA256**.
-     - In **Protocol Binding**, select **HTTP-POST**.
+     - In \*\*Protocol Binding, \*\*select **HTTP-POST**.
   4. In **Attribute Mapping**, add the following:
      - For SAML IdP: firstName attribute, lastName attribute
      - For OIDC IdP: firstName claim, lastName claim
@@ -941,7 +923,8 @@ Some configuration parameters must be defined during setup. These parameters are
   3. In **Role Mapping**, enable **IdP Role Mapping**.
   4. Specify the attribute fields for **First Name**, **Last Name**, and **Role**.
   5. Configure the role mapping options as described below.
-  6. Click **Save**.
+
+  Click **Save**.
 
   **Role Mapping Options**
 
@@ -963,8 +946,6 @@ Some configuration parameters must be defined during setup. These parameters are
 </Accordion>
 
 <Accordion title="Edit SSO configuration">
-  You can edit the existing SSO setup to modify connection details, certificate information, or identity provider settings to ensure seamless and secure authentication for users.
-
   1. In **Launchpad**, open **Sign-in Methods**.
   2. Select the IAM method you want to modify.
   3. Click **Edit** at the top-right corner of the **SSO Details** section.
@@ -978,10 +959,7 @@ Some configuration parameters must be defined during setup. These parameters are
 You can add additional **Identity and Access Management (IAM)** sign-in methods to Launchpad.\
 This is useful when your organization manages multiple identity providers or needs to support both internal and external user directories.
 
-<Accordion title="Configure a New IAM Method">
-  <Warning>
-    Only users with **Admin** permissions can add or modify IAM methods.
-  </Warning>
+<Accordion title="Add a new IAM method">
   1. In **Launchpad**, open the sidebar and click **Sign-in Methods**.\
      The **Sign-in Methods** page lists all existing IAM methods configured for your organization.
   2. Click **\+ Add Sign-in Method**.\
@@ -989,14 +967,16 @@ This is useful when your organization manages multiple identity providers or nee
   3. Select the **IAM method** you want to add and click **Continue**.
   4. Complete the required configuration fields.
   5. Click **Save**.
+
+  **Note:** Only users with **Admin** permissions can add or modify IAM methods.
 </Accordion>
 
-<Accordion title="Configure a Custom IAM Method">
+<Accordion title="Add a custom IAM method">
   When new users are added, they’re assigned to the default IAM method by default.\
   You can change the method manually during user creation by selecting Change Method.
 
   1. In **Launchpad**, click **Sign-in Methods** from the sidebar.
-  2. Click **\+ Add Sign-in Method**  and select **Custom Method**.
+  2. Click\*\*+ Add Sign-in Method\*\*  and select **Custom Method**.
   3. Enter the **Single Sign-On**. It is the Authentication Callback URL from Launchpad.
   4. Retrieve the **OpenID Well-known URL**, **Client ID**, and **Client Secret** from your SSO provider. These values are generated when KODE OS is added as one of the applications in your SSO platform. Go to the SSO provider’s documentation to learn more.
   5. Select **Set as default Sign-In Method**, to make a default authentication method. It is optional.
@@ -1010,11 +990,11 @@ You can manage or set the default sign-in method anytime under **Sign-in Methods
 
 There are two ways to sign in to the building environment: 
 
-<Accordion title="With a Workspace URL">
+<Accordion title="With a workspace URL">
   1. In the browser, enter your workspace domain. For example, [**<u>companyname.kodelabs.com</u>**](http://companyname.kodelabs.com).
   2. Choose one of the sign-in options:
 
-       a. Use **IAM tool**:
+       a. Use\*\*IAM tool: \*\*
 
           i. Click **Sign in with …** . For example, **Sign in with Azure AD**. 
 
@@ -1031,12 +1011,12 @@ There are two ways to sign in to the building environment: 
         ii. Click **Login with email**.
 </Accordion>
 
-<Accordion title="Without a Workspace URL">
+<Accordion title="Without a workspace URL">
   1. In the browser, go to [**accounts.kodelabs.com**](http://accounts.kodelabs.com).
   2. Enter your workspace domain and click **Continue**.
   3. Choose one of the following options:
 
-     a. Use **IAM tool**:
+     a. Use\*\*IAM tool: \*\*
 
           i. Click **Sign in with …** . For example, **Sign in with Azure AD**. 
 
@@ -1046,7 +1026,7 @@ There are two ways to sign in to the building environment: 
     - If you are not signed in to your IdP, you will be redirected to the IdP’s sign-in page.
     - If you are already authenticated with your IdP, you will be redirected directly to your workspace.
   </Note>
-       b. Use **KODE OS credentials** : 
+       b. Use**KODE OS credentials:**   
 
         i. Enter your **email** and **password**.
 
@@ -1091,10 +1071,10 @@ Enabling MFA adds an essential layer of protection against credential compromise
 You can configure MFA behavior from **Security Settings \>\> Authentication & Security \>\> MFA**.
 
 <img
-  src="/images/Imageplaceholder.png"
-  alt="Imageplaceholder Pn"
-  title="Imageplaceholder Pn"
-  style={{ width:"79%" }}
+  src=""
+  alt="Screenshot to be uploaded"
+  title="Screenshot 2025-11-09 at 14.18.16.png"
+  style={{ width:"71%" }}
 />
 
 - **Enforcement:** Choose whether to enforce MFA for all users or allow individual users to enable it themselves.
@@ -1140,10 +1120,10 @@ Strong password requirements reduce the likelihood of unauthorized access and cr
 All configurations are available under **Security Settings \>\> Authentication & Security \>\> Password**.
 
 <img
-  src="/images/Imageplaceholder.png"
-  alt="Imageplaceholder Pn"
-  title="Imageplaceholder Pn"
-  style={{ width:"85%" }}
+  src="/images/Screenshot2025-11-09at15.03.59.png"
+  alt="Screenshot to be uploaded"
+  title="Screenshot 2025-11-09 at 15.03.59.png"
+  style={{ width:"62%" }}
 />
 
 **Password Complexity**
@@ -1189,16 +1169,16 @@ To temporarily restrict access to a user account after a specified number of uns
 Timeout policies automatically sign out inactive users to protect sensitive data. \
 Configure them under **Security Settings \>\> Authentication & Security \>\> Timeout**.
 
-<img
-  src="/images/Imageplaceholder.png"
-  alt="Imageplaceholder Pn"
-  title="Imageplaceholder Pn"
-  style={{ width:"85%" }}
-/>
-
 <Tip>
   The timeouts can be configured in **days** or **hours**, depending on organizational needs.
 </Tip>
+
+<img
+  src="/images/Screenshot2025-11-09at14.44.09.png"
+  alt="Screenshot to be added"
+  title="Screenshot 2025-11-09 at 14.44.09.png"
+  style={{ width:"67%" }}
+/>
 
 - **Session Timeout:** Sets the total duration a signed-in session remains active. After this time elapses without any user activity, the user is logged out.
 - **Idle Timeout:** Defines the period of inactivity before automatic sign-out during an active session.
@@ -1277,16 +1257,14 @@ After creating a service account, you’re redirected to the **Service Account D
   </Warning>
   1. Click **Generate Private Key**.
   2. Choose one of the following:
-     - Select **Generate  new key** , or
+     - Select**Generate  new key** , or
      - Paste your own key in JSON format.
   3. Click **Copy** to retrieve the key. You must store the key in a secure location.
   4. Click **Save**.
 </Accordion>
 
-<Accordion title="Manage Keys and Expiration">
-  Each service account can have multiple keys with independent expiration and notification settings.
-
-  1. In the **Keys** list, click the ( ⋮ ) icon. 
+<Accordion title="Manage Keys and Expiration" description="Each service account can have multiple keys with independent expiration and notification settings.">
+  1. In the **Keys** list, click the ( \*\*⋮ \*\*) icon. 
   2. Select **Edit** to update expiration or notification settings.
   3. Set a **Key Expiration Date** to define the key’s validity period.
   4. In **Notify Users**, select the user(s) from the drop-down to  notify before the key expires.
@@ -1312,9 +1290,9 @@ Common permission scopes include:
 Each permission can be enabled independently, allowing developers to fine-tune integrations with just the right level of access.
 
 <Accordion title="Manage Permissions for a Service Account">
-  1. Go to **Service Accounts**,  select a service account and click **Permissions**.
+  1. Go to ****Service Accounts,  select a service account and clickPermissions**** .
   2. Click **Edit**.
-  3. Select the Read or Write permissions for each group. For example, PointsPublic, TimeseriesPublic, and DevicesPublic.
+  3. Select the \*\*Read \*\*or \*\*Write \*\*permissions for each group. For example, PointsPublic, TimeseriesPublic, and DevicesPublic.
 
      <Tip>
        Color indicators show which permissions are active in each section.
@@ -1374,10 +1352,3 @@ The Update MFA Setup field in the Inbound tab provides options to select between
 
 - **Inherited**: Guest users from that organization inherit MFA settings from their main organization.
 - **Enforced**: Guest users from that organization must follow your organization’s MFA settings.
-
-<img
-  src="/images/Imageplaceholder.png"
-  alt="Imageplaceholder Pn"
-  title="Imageplaceholder Pn"
-  style={{ width:"77%" }}
-/>
