@@ -3,27 +3,30 @@ title: "Clients"
 description: "Clients are organizations that are managed under a Channel Partner in Launchpad. A client is the secure space where you add buildings, invite users, and control how those users sign in and what they can do. Use this page to understand how client workspaces are structured and to complete the first setup tasks. "
 ---
 
-### **How Clients Fit in Launchpad**
+**How Clients Fit in Launchpad**
 
-Each **Client** is a customer of the **Channel Partner**, an organisation or tenant with its own workspace.
+Each Client is a customer of the Channel Partner, an organisation or tenant with its own workspace.
 
-Inside each **Client**, you manage:
+Inside each Client, you manage:
 
-- **Buildings**: Physical sites they monitor, like offices, campuses, and facilities.
-- **Users**: People who access those buildings.
-- **Roles and Permissions**: Define what each user is authorised to do.
-- **Authentication & Security (SSO)**: How users sign in securely.
-- **Trusted Organisations**: Share data or access with other clients.
-- **Service Accounts**: Automate integrations or API connections.
+- **Buildings**: Physical sites monitored within KODE OS, such as offices, campuses, and facilities.
+- **Users**: People who have access to those buildings.
+- **Roles and Permissions**: Define what each user is authorised to view or modify.
+- **Single Sign-On (SSO)**: Configure secure, centralised login using your organisation’s identity provider.
+- **Authentication**: Manage native KODE OS credentials and security settings for direct login.
+- **Service Accounts**:  Automate integrations or API connections without user credentials.
+- **Trusted Organisations**: Share building data or grant access between clients.
 
-<img
-  src="/ChatGPTImageNov7,2025,08_52_07PM.png"
-  alt="How Clientsfitin Launchpa"
-  title="How Clientsfitin Launchpa"
-  style={{ width:"62%" }}
-/>
+  <img
+    src="/images/Client.png"
+    alt="Client Pn"
+    title="Client Pn"
+    style={{ width:"35%" }}
+  />
 
-### **Create or open a client when:**
+Hierarchy showing how a Channel Partner manages a Client
+
+**When to Create or Open a Client:**
 
 - A Channel Partner is onboarding a new customer.
 - You need to group buildings and users for one customer.
@@ -33,61 +36,39 @@ Inside each **Client**, you manage:
 
 You need at least one building to begin using your client workspace. A building represents a physical facility that you monitor and control through KODE OS. Adding a building lets you link systems, invite users, and track data for that site. It’s the first step toward managing your portfolio.
 
-### Prerequisites
+**Before You Begin**
 
-Before adding a building, make sure you:
-
-- Have access to a **Client** under a **Channel Partner**.
-- Hold the **Admin** or **Manager** role for that client.
-- Know your building’s name and location.
+- Make sure you have access to a **Client** in a **Channel Partner**.
+- Ensure you hold an **Admin** or **Manager** role for that client.
+- Confirm that your **building name** and **location** are available.
 
 <Accordion title="Add a First Building">
+  The new building is automatically set to _Unpublished_ status. By default, only Super Admins can view unpublished buildings.
+
   1. In **Launchpad**, select **Buildings**. The **Buildings list** opens, showing all published and unpublished buildings with their address, time zone, and enabled products.
   2. Click **\+ Add Building**.
-  3. In **General Information**, enter the required details for your new building. Fields marked with an asterisk (\*) are mandatory.
-
-       <Tooltip tip="">3.1. Enter the </Tooltip>**Name**<Tooltip tip="">of the building as you want it to appear in Launchpad.</Tooltip>
-
-       <Tooltip tip="">3.2. Enter the </Tooltip>**Year**<Tooltip tip="">the building was completed.</Tooltip>
-
-       <Tooltip tip="">3.3. Enter an </Tooltip>**Area**<Tooltip tip="">in </Tooltip> _ft²_<Tooltip tip="">. Total floor area of the building.</Tooltip>
-
-       <Tooltip tip="">3.4. Select the </Tooltip>\*\*Type \*\*<Tooltip tip="">from the dropdown. </Tooltip>
-
-       <Tooltip tip="">3.5. Enter the </Tooltip>\*\*# of Floors \*\*<Tooltip tip="">in the building.</Tooltip> 
-
-       3.6. Select the **Country Code** from the drop-down.
-
-       3.7. Enter the **Phone Number**. 
-
-       <Tooltip tip="">3.8. Enter a </Tooltip>**Base Temperature**<Tooltip tip="">. It is the reference temperature for energy calculations.</Tooltip>
-
-       <Tooltip tip="">3.9. Select the temperature</Tooltip> **Unit.**
-  4.  In **Address Information**, enter the complete address of the building. Ensure all fields are accurate, as these details affect location-based analytics.
-
-       4.1. Enter an **Address**. It must be the primary address line for the building.
-
-       4.2. Enter a **Street**. 
-
-       4.3. Enter a **City** where the building is located.
-
-       4.4. Enter a **State**.
-
-       4.5. Enter a **Zip** code.
-
-       4.6. Enter an optional **Address Line 2**.
+  3. In **General Information**, enter the required details for your new building. Fields marked with an asterisk (\*) are mandatory.\
+       3.1. Enter the **Name **of the building as you want it to appear in Launchpad.\
+       3.2. Enter the **Year the** building was completed.\
+       3.3. Enter an **Area in** _ft²_. Total floor area of the building.\
+       3.4. Select the **Type** from the dropdown.\
+        3.5. Enter the **# of Floors** in the building. \
+       3.6. Select the **Country Code** from the drop-down.\
+       3.7. Enter the **Phone Number**. \
+       3.8. Enter a **Base Temperature**. It is the reference temperature for energy calculations.\
+       3.9. Select the temperature **Unit.**
+  4.  In **Address Information**, enter the complete address of the building. Ensure all fields are accurate, as these details affect location-based analytics.\
+       4.1. Enter an **Address**. It must be the primary address line for the building.\
+       4.2. Enter a **Street**. \
+       4.3. Enter a **City** where the building is located.\
+       4.4. Enter a **State**.\
+       4.5. Enter a **Zip** code.\
+       4.6. Enter an optional **Address Line 2**.
   5.  Click **Save**.
 
-     <img
-       src="/k1.png"
-       alt="Addingabuildingin Launchpa"
-       title="Addingabuildingin Launchpa"
-       style={{ width:"63%" }}
-     />
+  ![Addingafirstbuilding Pn](/Addingafirstbuilding.png)
 
-     The new building is automatically set to _Unpublished_ status. By default, only **Super Admins** can view unpublished buildings.
-
-     You have successfully added a new building to your KODE OS portfolio. The building is now listed in Launchpad, ready for further configuration.
+  You have successfully added a new building to your KODE OS portfolio. The building is now listed in Launchpad, ready for further configuration.
 </Accordion>
 
 ## Manage Buildings
@@ -159,7 +140,7 @@ This task is for administrators who manage access within KODE OS.
   Without an assigned building, a user can sign in but won’t see any building-related data in Cloud BMS.
 </Info>
 
-### Prerequisites
+### Before You Begin
 
 - You must have **Admin** permissions for the client.
 - The user must already exist in **Launchpad \>\> Users**.
@@ -189,7 +170,7 @@ This task is for administrators who manage access within KODE OS.
   An email notification is automatically sent to confirm their new access.
 </Accordion>
 
-## Manage Users (Clients)
+## Manage Users
 
 Users display all existing accounts in your organization, including active, pending, and invited users.
 
@@ -327,7 +308,7 @@ Roles keep the workspace secure and organized. They determine who can manage bui
 Launchpad uses **Role-Based Access Control (RBAC)** to manage user access.\
 Instead of assigning individual permissions to each user, permissions are grouped under _roles_, and users inherit access based on their assigned role.
 
-**Prerequisites**
+**Before You Begin**
 
 - You must have an **Admin** or **Super Admin** role.
 - At least one **user** and **building** must exist.
@@ -418,33 +399,11 @@ Each permission is tied to a role which grants users their effective access.
 Permissions are grouped into **modules**, like Buildings, Maintenance, Users and **submodules**, like Users \> General.\
 This structure allows administrators to give granular, precise access.
 
-**Prerequisites**
+**Before You Begin**
 
 - Have **Admin** or **Super Admin** permissions in Launchpad.
 - Have already created a **role** in Launchpad.
 - Know what level of access that role should have for user management.
-
-<Accordion title="Assign permissions to a role">
-  1. In **Launchpad**, go to **Apps → KODE OS → Roles**.
-  2. Select the role to modify.
-  3. Click **Edit**.
-  4. In **Permissions**, expand a module (for example, _Maintenance_ or _Buildings_).
-  5. Select **Read** or **Write** checkboxes as needed.
-  6. Click **Save**.
-
-  <Note>
-    Assign only the minimum permissions needed to keep your access model secure and auditable.
-  </Note>
-</Accordion>
-
-<Accordion title="Fine-tune permissions with constraints" description="Once you’ve assigned base permissions, you can limit how those permissions behave for specific user roles.">
-  1. In the same **Permissions** section, scroll to **Users \>\> General**.
-  2. Next to **Get Users**, click **Constraints**.
-     - In the pop-up, select **Assigned in Same Building** to restrict access to buildings the user manages.
-  3. For **Create Users** and **Delete Users**, click **Manage Constraints**.
-     - Under **Choose Roles**, select which user types this role can create or delete.
-  4. Click **Confirm**, then **Save**.
-</Accordion>
 
 <Accordion title="Configure Permissions for Users in KODE OS">
    1. In **Launchpad**, click **Apps**.
@@ -453,9 +412,9 @@ This structure allows administrators to give granular, precise access.
    4. Select the role  to modify, then click **Edit**.
    5. In  **Permissions**, go to **Users \>\> General**.
    6. Select  the read and write permissions you want to enable:
-      - **Get Users** — view existing users.
-      - **Create Users** — add new users.
-      - **Delete Users** — remove users from KODE OS.
+      - **Get Users**: view existing users.
+      - **Create Users**: add new users.
+      - **Delete Users**: remove users from KODE OS.
 
       After selecting the permissions, you can fine-tune them by applying constraints.
    7. Next to **Get Users**, click **Constraints**. 
@@ -848,7 +807,7 @@ When SSO is enabled:
 - Access to KODE OS and related apps is automatically granted once verified.
 - Administrators retain centralized control over user access and permissions.
 
-**Before you begin**
+**Before You Begin**
 
 To enable Single Sign-On (SSO) for your organization, ensure you have:
 
